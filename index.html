@@ -2,234 +2,95 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Justin Rodriguez — Cybersecurity Portfolio</title>
-  <meta name="description" content="Portfolio of Justin Rodriguez, NSOC Analyst. Experience, education, certifications, skills, projects, and contact." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
-  <style>
-    :root{
-      --bg: #0b0f1a;
-      --card: #121826;
-      --text: #e6edf7;
-      --muted: #b7c0d8;
-      --primary: #4f8cff;
-      --accent: #7c5cff;
-      --border: #1f2738;
-      --link: #99b7ff;
-      --success: #28a745;
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family:"Inter",system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-      color:var(--text);
-      background:linear-gradient(180deg,#0b0f1a 0%, #0e1422 50%, #0b0f1a 100%);
-    }
-
-    /* Layout */
-    .container{
-      max-width:1000px;
-      margin:0 auto;
-      padding:24px;
-    }
-    header{
-      padding:48px 0 24px;
-      text-align:center;
-    }
-    header h1{
-      margin:0 0 8px;
-      font-size:2.25rem;
-      letter-spacing:0.2px;
-    }
-    header h2{
-      margin:0 0 16px;
-      font-weight:600;
-      color:var(--muted);
-      font-size:1rem;
-    }
-    .actions{
-      display:flex;
-      gap:12px;
-      justify-content:center;
-      flex-wrap:wrap;
-    }
-    .button{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      padding:10px 16px;
-      border-radius:10px;
-      border:1px solid var(--border);
-      background:linear-gradient(180deg,#152038,#121826);
-      color:var(--text);
-      text-decoration:none;
-      font-weight:600;
-      transition:transform 0.06s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-      box-shadow:0 6px 18px rgba(79,140,255,0.12);
-    }
-    .button:hover{
-      transform:translateY(-1px);
-      border-color:#2b3a57;
-      box-shadow:0 10px 24px rgba(79,140,255,0.18);
-    }
-
-    /* Nav */
-    nav{
-      position:sticky;
-      top:0;
-      z-index:50;
-      backdrop-filter:saturate(140%) blur(8px);
-      background:rgba(11,15,26,0.6);
-      border-bottom:1px solid var(--border);
-    }
-    .nav-inner{
-      max-width:1000px;
-      margin:0 auto;
-      padding:10px 24px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:16px;
-    }
-    .brand{
-      font-weight:700;
-      letter-spacing:0.3px;
-    }
-    .menu-toggle{
-      display:none;
-      cursor:pointer;
-      padding:8px 12px;
-      border-radius:8px;
-      border:1px solid var(--border);
-      color:var(--text);
-      background:linear-gradient(180deg,#152038,#121826);
-    }
-    #menu{
-      display:flex;
-      flex-wrap:wrap;
-      gap:8px;
-      list-style:none;
-      margin:0;
-      padding:0;
-    }
-    #menu a{
-      display:block;
-      padding:8px 12px;
-      border-radius:8px;
-      color:var(--muted);
-      text-decoration:none;
-      transition:color 0.2s ease, background 0.2s ease;
-    }
-    #menu a:hover{
-      color:var(--text);
-      background:#152038;
-    }
-
-    /* Sections */
-    section{
-      margin:28px 0;
-    }
-    section h3{
-      margin:0 0 14px;
-      font-size:1.35rem;
-      border-bottom:1px solid var(--border);
-      padding-bottom:8px;
-    }
-    .grid{
-      display:grid;
-      gap:12px;
-    }
-    @media (min-width: 768px){
-      .grid.cols-2{grid-template-columns:1fr 1fr;}
-      .grid.cols-3{grid-template-columns:repeat(3,1fr);}
-    }
-
-    /* Cards & tiles */
-    .card{
-      background:linear-gradient(180deg,#121826 0%, #101624 100%);
-      border:1px solid var(--border);
-      border-radius:14px;
-      padding:16px;
-      box-shadow:0 8px 20px rgba(16,22,36,0.35);
-    }
-    .card h4{
-      margin:0 0 8px;
-      font-size:1.05rem;
-    }
-    .card p{
-      margin:0;
-      color:var(--muted);
-      line-height:1.55;
-    }
-    .tile{
-      background:linear-gradient(180deg,#121826 0%, #101624 100%);
-      border:1px solid var(--border);
-      border-radius:12px;
-      padding:12px;
-      font-weight:600;
-    }
-
-    /* Skills */
-    .skills{
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-      list-style:none;
-      padding:0;
-      margin:0;
-    }
-    .skills li{
-      background:linear-gradient(180deg,#152038 0%, #121826 100%);
-      border:1px solid var(--border);
-      color:var(--text);
-      padding:8px 12px;
-      border-radius:20px;
-      box-shadow:0 6px 16px rgba(18,24,38,0.3);
-      font-size:0.95rem;
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-    }
-
-    /* Testimonials */
-    blockquote{
-      margin:0;
-      padding:16px 18px;
-      border-left:3px solid var(--accent);
-      background:linear-gradient(180deg,#121826 0%, #101624 100%);
-      border:1px solid var(--border);
-      border-radius:10px;
-      color:var(--muted);
-      font-style:italic;
-    }
-
-    /* Footer contact */
-    .contact-actions{
-      text-align:center;
-      display:flex;
-      justify-content:center;
-      gap:12px;
-      flex-wrap:wrap;
-      margin-top:12px;
-    }
-
-    /* Responsive */
-    @media (max-width: 768px){
-      .menu-toggle{display:inline-flex}
-      #menu{display:none; flex-direction:column; width:100%;}
-      #menu.open{display:flex}
-      .nav-inner{flex-wrap:wrap}
-    }
-
-    /* Accessibility focus */
-    a:focus-visible, button:focus-visible{
-      outline:2px solid var(--primary);
-      outline-offset:2px;
-      border-radius:8px;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Connect With Justin Rodriguez</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <header>
+    <h1>Justin Rodriguez</h1>
+    <h2>NSOC Analyst • CySa+ • Security+ • B.A. Computer Science • A.A.S. Cybersecurity</h2>
+    <div>
+      <a class="button" href="https://www.linkedin.com/in/justin-rodriguez-1b7a5128b/" target="_blank">LinkedIn</a>
+      <a class="button" href="mailto:justinrodriguez0728@gmail.com?subject=Cybersecurity%20Portfolio%20-%20Justin%20Rodriguez&body=Hello%20Justin,%20I%20reviewed%20your%20portfolio%20and%20would%20like%20to%20connect.">Email Me</a>
+    </div>
+  </header>
+
+  <nav>
+    <div class="menu-toggle" id="menu-toggle">☰ Menu</div>
+    <ul id="menu">
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#testimonials">Testimonials</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section id="experience">
+    <h3>Professional Experience</h3>
+    <div class="card">
+      <h4>Rooms To Go – NSOC Analyst</h4>
+      <p>Monitored 250+ networks, managed incidents, enforced Conditional Access Policies, supported Citrix servers.</p>
+    </div>
+    <div class="card">
+      <h4>TheIncLab – Cybersecurity Intern</h4>
+      <p>Applied RMF, developed NIST/CMMC policies, monitored events with Wazuh SIEM, created system diagrams.</p>
+    </div>
+  </section>
+
+  <section id="education">
+    <h3>Education & Certifications</h3>
+    <div class="tile">B.A. Computer Science (Cybersecurity)</div>
+    <div class="tile">A.A.S. Cybersecurity</div>
+    <div class="tile">CompTIA Security+</div>
+    <div class="tile">CompTIA CySA+</div>
+    <div class="tile">Azure AZ-500 (in progress)</div>
+    <div class="tile">Network+ (expected Jan 2026)</div>
+  </section>
+
+  <section id="skills">
+    <h3>Skills</h3>
+    <ul class="skills">
+      <li>⚡ NIST, CMMC, ISO Compliance</li>
+      <li>🔍 SIEM Tools & Incident Response</li>
+      <li>💻 Python, C, C++, C#, Java</li>
+      <li>📊 Policy Development & Documentation</li>
+      <li>🤝 Team Communication</li>
+    </ul>
+  </section>
+
+  <section id="testimonials">
+    <h3>Testimonials</h3>
+    <blockquote>"Justin is a dedicated analyst who thrives on solving complex problems." – Mentor</blockquote>
+  </section>
+
+  <section id="projects">
+    <h3>Projects</h3>
+    <div class="card">Future showcase of cybersecurity projects and automation tools.</div>
+  </section>
+
+  <section id="contact" style="text-align:center;">
+    <h3>Contact</h3>
+    <a class="button" href="https://www.linkedin.com/in/justin-rodriguez-1b7a5128b/" target="_blank">LinkedIn</a>
+    <a class="button" href="mailto:justinrodriguez0728@gmail.com?subject=Cybersecurity%20Portfolio%20-%20Justin%20Rodriguez&body=Hello%20Justin,%20I%20reviewed%20your%20portfolio%20and%20would%20like%20to%20connect.">Email Me</a>
+  </section>
+
+  <footer>
+    © <span id="year"></span> Justin Rodriguez. All rights reserved.
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const toggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('show');
+    });
+
+    // Current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
