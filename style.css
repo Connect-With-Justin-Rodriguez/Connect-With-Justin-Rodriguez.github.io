@@ -41,6 +41,7 @@ nav {
   background: #111827;
   color: #fff;
   padding: 0.5rem;
+  position: relative;
 }
 nav ul {
   list-style: none;
@@ -63,6 +64,8 @@ nav ul li a:hover {
 .menu-toggle {
   display: none;
   cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 /* Sections */
@@ -113,5 +116,4 @@ section h3 {
   padding: 0;
 }
 .skills li {
-  background: #e0f2fe;
-  margin: 0.4rem 0;
+  background
