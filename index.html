@@ -83,7 +83,7 @@
       <p><strong>What I learned:</strong> Gained deeper insight into AI-driven moderation techniques, ethical considerations of algorithmic bias, and practical applications of machine learning in securing digital platforms.</p>
 
       <!-- PDF Preview -->
-      <iframe src="CS4930.pdf" width="100%" height="500px" class="pdf-frame"></iframe>
+      <iframe src="CS4930.pdf" height="500px" class="pdf-frame"></iframe>
 
       <!-- Backup link -->
       <a class="pdf-link" href="CS4930.pdf" target="_blank">📄 Open Full Report</a>
@@ -109,8 +109,18 @@
 <script>
   const toggle = document.getElementById('menu-toggle');
   const menu = document.getElementById('menu');
+  const navLinks = menu.querySelectorAll('a');
+
+  // Toggle menu open/close on small screens
   toggle.addEventListener('click', () => {
     menu.classList.toggle('show');
+  });
+
+  // Close menu after clicking a link (better mobile UX)
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      menu.classList.remove('show');
+    });
   });
 </script>
 
