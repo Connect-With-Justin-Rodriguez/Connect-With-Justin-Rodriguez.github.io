@@ -4,7 +4,7 @@ body {
   color: #e6edf3;
   margin: 0;
   padding: 0;
-  scroll-behavior: smooth; /* enables smooth scrolling */
+  scroll-behavior: smooth;
 }
 
 header {
@@ -24,25 +24,58 @@ h2 {
   margin-top: 0;
 }
 
+/* Navigation */
 nav {
-  position: sticky;
-  top: 0;
   background-color: #1a1f36;
   padding: 12px;
   text-align: center;
-  z-index: 1000;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: none; /* hidden by default on mobile */
+}
+
+nav ul.show {
+  display: block;
+}
+
+nav li {
+  margin: 10px 0;
 }
 
 nav a {
   color: #e6edf3;
   text-decoration: none;
-  margin: 0 15px;
   font-size: 16px;
   transition: color 0.3s;
 }
 
 nav a:hover {
   color: #00c853;
+}
+
+.menu-toggle {
+  color: #e6edf3;
+  font-size: 18px;
+  cursor: pointer;
+  display: block;
+}
+
+/* Desktop view */
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+  nav ul {
+    display: flex;
+    justify-content: center;
+  }
+  nav li {
+    margin: 0 15px;
+  }
 }
 
 section {
