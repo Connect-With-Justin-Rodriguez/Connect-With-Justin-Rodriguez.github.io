@@ -7,11 +7,34 @@ body {
   scroll-behavior: smooth;
 }
 
-header {
-  padding: 80px 20px;
+/* Hero with images left/right */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: linear-gradient(135deg, #00c853, #58a6ff);
   color: white;
+  padding: 40px 20px;
+  flex-wrap: wrap; /* allows stacking on mobile */
+}
+
+.hero-text {
   text-align: center;
+  margin: 20px;
+}
+
+.side-pic {
+  width: 150px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+  margin: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.side-pic:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.6);
 }
 
 h1 {
