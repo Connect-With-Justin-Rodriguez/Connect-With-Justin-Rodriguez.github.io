@@ -12,18 +12,22 @@
   <h1>Justin Rodriguez</h1>
   <h2>Cybersecurity Analyst • NSOC • SIEM • Detection Engineering</h2>
   <div>
-    <a class="button" href="https://www.linkedin.com/in/justinrodriguez0728" target="_blank">LinkedIn</a>
-    <a class="button" href="mailto:justinrodriguez0728@gmail.com">Email Me</a>
+    <a class="button" href="https://www.linkedin.com/in/justin-rodriguez-1b7a5128b/" target="_blank">LinkedIn</a>
+    <a class="button" href="mailto:justinrodriguez0728@gmail.com?subject=Cybersecurity%20Portfolio%20-%20Justin%20Rodriguez&body=Hello%20Justin,%20I%20reviewed%20your%20portfolio%20and%20would%20like%20to%20connect.">Email Me</a>
   </div>
 </header>
 
+<!-- Navigation -->
 <nav>
-  <a href="#experience">Experience</a>
-  <a href="#education">Education</a>
-  <a href="#skills">Skills</a>
-  <a href="#testimonials">Testimonials</a>
-  <a href="#projects">Projects</a>
-  <a href="#contact">Contact</a>
+  <div class="menu-toggle" id="menu-toggle">☰ Menu</div>
+  <ul id="menu">
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#testimonials">Testimonials</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
 </nav>
 
 <section id="experience">
@@ -70,13 +74,22 @@
 </section>
 
 <section id="contact" style="text-align:center;">
-  <a class="button" href="https://www.linkedin.com/in/justinrodriguez0728" target="_blank">LinkedIn</a>
-  <a class="button" href="mailto:justinrodriguez0728@gmail.com">Email Me</a>
+  <a class="button" href="https://www.linkedin.com/in/justin-rodriguez-1b7a5128b/" target="_blank">LinkedIn</a>
+  <a class="button" href="mailto:justinrodriguez0728@gmail.com?subject=Cybersecurity%20Portfolio%20-%20Justin%20Rodriguez&body=Hello%20Justin,%20I%20reviewed%20your%20portfolio%20and%20would%20like%20to%20connect.">Email Me</a>
 </section>
 
 <footer>
   <p>© 2025 Justin Rodriguez</p>
 </footer>
+
+<script>
+  // Mobile menu toggle
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('menu');
+  toggle.addEventListener('click', () => {
+    menu.classList.toggle('show');
+  });
+</script>
 
 </body>
 </html>
