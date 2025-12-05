@@ -34,12 +34,14 @@ header h1 {
 header h2 {
   margin: 0.5rem 0;
   font-weight: 400;
-  max-width: 700px;
+  max-width: 800px;
   margin-left: auto;
   margin-right: auto;
 }
 
-header .button {
+/* Header buttons reused in About section */
+header .button,
+.button {
   background: #2563eb;
   color: #fff;
   padding: 0.6rem 1.2rem;
@@ -51,7 +53,7 @@ header .button {
   transition: background 0.3s ease, transform 0.1s ease;
 }
 
-header .button:hover {
+.button:hover {
   background: #1e40af;
   transform: translateY(-1px);
 }
@@ -216,8 +218,9 @@ blockquote {
 }
 
 /* Contact Section */
-#contact .button {
-  margin: 0.5rem;
+#contact p {
+  max-width: 600px;
+  margin: 0.5rem 0 0;
 }
 
 /* Footer */
