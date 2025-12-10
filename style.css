@@ -1,4 +1,50 @@
-/* General Reset */
+/* ---------- Color System (Light by default) ---------- */
+:root {
+  --bg: #f4f6f9;
+  --text: #111827;
+  --header-bg: #1f2937;
+  --header-text: #f9fafb;
+  --nav-bg: #111827;
+  --nav-text: #f9fafb;
+  --accent: #2563eb;
+  --accent-dark: #1e40af;
+  --tile-bg: #e5e7eb;
+  --pill-bg: #e5e7eb;
+  --muted-text: #6b7280;
+  --card-bg: #ffffff;
+  --card-text: #111827;
+  --footer-bg: #1f2937;
+  --footer-text: #9ca3af;
+  --shadow-soft: 0 4px 6px rgba(0,0,0,0.1);
+  --shadow-soft-hover: 0 6px 12px rgba(0,0,0,0.15);
+  --nav-border: #374151;
+  --menu-toggle-hover-bg: #020617;
+}
+
+/* Dark mode that follows system setting */
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --bg: #020617;
+    --text: #e5e7eb;
+    --header-bg: #020617;
+    --header-text: #e5e7eb;
+    --nav-bg: #020617;
+    --nav-text: #e5e7eb;
+    --tile-bg: #111827;
+    --pill-bg: #111827;
+    --card-bg: #0b1120;
+    --card-text: #e5e7eb;
+    --footer-bg: #020617;
+    --footer-text: #6b7280;
+    --shadow-soft: 0 4px 10px rgba(0,0,0,0.6);
+    --shadow-soft-hover: 0 8px 20px rgba(0,0,0,0.8);
+    --nav-border: #1f2937;
+    --menu-toggle-hover-bg: #111827;
+  }
+}
+
+/* ---------- Global Reset ---------- */
 *,
 *::before,
 *::after {
@@ -14,14 +60,14 @@ body {
   margin: 0;
   padding: 0;
   line-height: 1.6;
-  background: #f4f6f9;
-  color: #333;
+  background: var(--bg);
+  color: var(--text);
 }
 
-/* Header */
+/* ---------- Header ---------- */
 header {
-  background: #1f2937;
-  color: #fff;
+  background: var(--header-bg);
+  color: var(--header-text);
   text-align: center;
   padding: 2rem 1rem;
 }
@@ -32,17 +78,16 @@ header h1 {
 }
 
 header h2 {
-  margin: 0.5rem 0;
+  margin: 0.5rem 0 0;
   font-weight: 400;
-  max-width: 800px;
+  max-width: 700px;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* Header buttons reused in About section */
-header .button,
+/* ---------- Buttons ---------- */
 .button {
-  background: #2563eb;
+  background: var(--accent);
   color: #fff;
   padding: 0.6rem 1.2rem;
   margin: 0.3rem;
@@ -50,21 +95,28 @@ header .button,
   text-decoration: none;
   display: inline-block;
   font-weight: 600;
-  transition: background 0.3s ease, transform 0.1s ease;
+  transition: background 0.3s ease, transform 0.1s ease, box-shadow 0.1s ease;
+  box-shadow: 0 2px 4px rgba(15, 23, 42, 0.25);
 }
 
 .button:hover {
-  background: #1e40af;
+  background: var(--accent-dark);
   transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(15, 23, 42, 0.35);
 }
 
-/* Navigation */
+.button-row {
+  margin-top: 1.5rem;
+}
+
+/* ---------- Navigation ---------- */
 nav {
-  background: #111827;
-  color: #fff;
+  background: var(--nav-bg);
+  color: var(--nav-text);
   padding: 0.5rem 1rem;
   position: relative;
   z-index: 1000;
+  border-bottom: 1px solid var(--nav-border);
 }
 
 nav ul {
@@ -81,7 +133,7 @@ nav ul li {
 }
 
 nav ul li a {
-  color: #fff;
+  color: var(--nav-text);
   text-decoration: none;
   font-weight: bold;
   font-size: 0.95rem;
@@ -96,8 +148,8 @@ nav ul li a:hover {
   cursor: pointer;
   font-size: 1rem;
   font-weight: bold;
-  background: #111827;
-  border: 1px solid #374151;
+  background: var(--nav-bg);
+  border: 1px solid var(--nav-border);
   padding: 0.4rem 0.75rem;
   border-radius: 4px;
   width: fit-content;
@@ -106,10 +158,10 @@ nav ul li a:hover {
 }
 
 .menu-toggle:hover {
-  background: #020617;
+  background: var(--menu-toggle-hover-bg);
 }
 
-/* Main Layout */
+/* ---------- Main Layout ---------- */
 main {
   max-width: 1000px;
   margin: 0 auto;
@@ -124,43 +176,36 @@ section {
 section h3 {
   font-size: 1.8rem;
   margin-bottom: 1rem;
-  border-bottom: 2px solid #2563eb;
+  border-bottom: 2px solid var(--accent);
   display: inline-block;
   padding-bottom: 0.3rem;
 }
 
-/* Cards */
+/* ---------- Cards ---------- */
 .card {
-  background: #fff;
+  background: var(--card-bg);
+  color: var(--card-text);
   border-radius: 8px;
   padding: 1.5rem;
   margin-bottom: 1.5rem;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  box-shadow: var(--shadow-soft);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  box-shadow: var(--shadow-soft-hover);
 }
 
 .card h4 {
   margin-top: 0;
-  color: #2563eb;
+  color: var(--accent);
 }
 
-/* Small sub-heading inside cards (for flowchart label, etc.) */
-.sub-heading {
-  margin-top: 1.2rem;
-  margin-bottom: 0.4rem;
-  font-size: 1rem;
-  font-weight: 600;
-  color: #374151;
-}
-
-/* Tiles (Education) */
+/* ---------- Tiles (Education) ---------- */
 .tile {
-  background: #e5e7eb;
+  background: var(--tile-bg);
+  color: var(--text);
   display: inline-block;
   padding: 0.8rem 1.2rem;
   margin: 0.4rem;
@@ -168,7 +213,7 @@ section h3 {
   font-weight: bold;
 }
 
-/* Skills */
+/* ---------- Skills ---------- */
 .skills {
   list-style: none;
   padding: 0;
@@ -179,37 +224,77 @@ section h3 {
 }
 
 .skills li {
-  background: #e5e7eb;
+  background: var(--pill-bg);
   padding: 0.5rem 0.9rem;
   border-radius: 999px;
   font-size: 0.95rem;
 }
 
-/* Testimonials */
-blockquote {
-  background: #fff;
-  border-left: 4px solid #2563eb;
-  padding: 1rem 1.5rem;
-  margin: 0;
-  border-radius: 4px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+/* ---------- Testimonial Card ---------- */
+.testimonial-card {
+  background: var(--card-bg);
+  color: var(--card-text);
+  border-radius: 8px;
+  padding: 1.5rem 1.5rem 1.25rem;
+  box-shadow: var(--shadow-soft);
+  border-left: 4px solid var(--accent);
 }
 
-/* PDF Frame & Link */
+.testimonial-quote {
+  margin: 0 0 0.9rem;
+  font-style: italic;
+}
+
+.testimonial-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  font-size: 0.9rem;
+}
+
+.testimonial-person {
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonial-name {
+  font-weight: 600;
+}
+
+.testimonial-title {
+  color: var(--muted-text);
+}
+
+.testimonial-link {
+  text-decoration: none;
+  color: var(--accent);
+  font-weight: 600;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(37, 99, 235, 0.08);
+}
+
+.testimonial-link:hover {
+  text-decoration: underline;
+}
+
+/* ---------- PDF Frame & Link ---------- */
 .pdf-frame {
   width: 100%;
   max-width: 100%;
   border: none;
   border-radius: 8px;
   margin-top: 0.75rem;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+  box-shadow: var(--shadow-soft);
 }
 
 .pdf-link {
   display: inline-block;
   margin-top: 0.75rem;
   text-decoration: none;
-  color: #2563eb;
+  color: var(--accent);
   font-weight: bold;
 }
 
@@ -217,23 +302,21 @@ blockquote {
   text-decoration: underline;
 }
 
-/* Contact Section */
+/* ---------- Contact Section ---------- */
 #contact p {
-  max-width: 600px;
-  margin: 0.5rem 0 0;
+  max-width: 650px;
 }
 
-/* Footer */
+/* ---------- Footer ---------- */
 footer {
   text-align: center;
   padding: 1rem;
-  background: #1f2937;
-  color: #9ca3af;
+  background: var(--footer-bg);
+  color: var(--footer-text);
   font-size: 0.85rem;
 }
 
 /* ---------- Responsive Styles ---------- */
-
 @media (max-width: 768px) {
   header {
     padding: 1.5rem 1rem;
@@ -289,5 +372,10 @@ footer {
   .tile {
     display: block;
     width: 100%;
+  }
+
+  .testimonial-meta {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
