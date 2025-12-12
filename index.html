@@ -34,10 +34,9 @@
 
     <div class="card">
       <p>
-          I’m Justin Rodriguez, a Network Security Operations Analyst specializing in event monitoring, incident response, and enterprise network defense. 
-          I proactively monitor 200+ networks using tools like SolarWinds, Cisco vManage, Juniper Mist, Citrix, and Microsoft Defender, driving resolution during major incidents and escalating appropriately to restore services. 
-          Certified in CompTIA Security+ and CySA+, I apply proven security practices to detect, analyze, and respond to threats in real time. My background includes a B.A. in Computer Science (Cyber Security focus) and an A.A.S. in Cyber Security, providing both the technical foundation and hands-on expertise to safeguard enterprise systems.
-</p>
+        I’m Justin Rodriguez, a Network Security Operations Analyst specializing in event monitoring, incident response, and enterprise network defense.
+        I proactively monitor 200+ networks using tools like SolarWinds, Cisco vManage, Juniper Mist, Citrix, and Microsoft Defender, driving resolution during major incidents and escalating appropriately to restore services.
+        Certified in CompTIA Security+ and CySA+, I apply proven security practices to detect, analyze, and respond to threats in real time. My background includes a B.A. in Computer Science (Cyber Security focus) and an A.A.S. in Cyber Security, providing both the technical foundation and hands-on expertise to safeguard enterprise systems.
       </p>
     </div>
   </section>
@@ -48,10 +47,10 @@
 
     <div class="card">
       <p>
-            I am open to a wide range of cybersecurity roles where I can stay close to the technology, including blue team operations, SOC and NSOC analysis, cloud security, and security engineering. 
-            I enjoy working directly with alerts, logs, and monitoring tools to understand what is happening in an environment and help the team respond quickly and effectively. 
-            Through my internship and personal projects I have also created policies, diagrams, and security documentation, which strengthened my understanding of governance, risk, and compliance.
-            Long term, I hope to grow into GRC and security governance roles where I can connect day-to-day operations with broader organizational risk and compliance goals.
+        I am open to a wide range of cybersecurity roles where I can stay close to the technology, including blue team operations, SOC and NSOC analysis, cloud security, and security engineering.
+        I enjoy working directly with alerts, logs, and monitoring tools to understand what is happening in an environment and help the team respond quickly and effectively.
+        Through my internship and personal projects I have also created policies, diagrams, and security documentation, which strengthened my understanding of governance, risk, and compliance.
+        Long term, I hope to grow into GRC and security governance roles where I can connect day-to-day operations with broader organizational risk and compliance goals.
       </p>
 
       <div class="button-row">
@@ -144,30 +143,20 @@
   <section id="projects">
     <h3>Selected Projects</h3>
 
-    <!-- AI Content Moderation Report -->
+    <!-- NEW: Video Project (FIRST) -->
     <div class="card">
-      <h4>AI Content Moderation: A Critical Examination of AI in Social Media and Future Directions</h4>
+      <h4>Portfolio Video</h4>
       <p>
-        A research report exploring how artificial intelligence can be applied to social media moderation.
-        I analyzed algorithms for detecting harmful content, user behavior patterns, and bot activity, while
-        also addressing ethical and privacy concerns around automated decision-making.
+        A short walkthrough video I use to showcase my background, interests, and the kind of work I’m building in cybersecurity.
       </p>
-      <p><strong>Why I did it:</strong> To connect academic research with real-world cybersecurity and online safety challenges.</p>
-      <p><strong>What I learned:</strong> Gained deeper insight into AI-driven moderation techniques, algorithmic bias, and the tradeoffs between automation, privacy, and platform security.</p>
 
-      <!-- PDF Preview -->
-      <iframe
-        src="CS4930.pdf"
-        height="500px"
-        class="pdf-frame"
-        title="AI Content Moderation Report PDF Preview">
-      </iframe>
-
-      <!-- Backup link -->
-      <a class="pdf-link" href="CS4930.pdf" target="_blank">📄 Open Full Report</a>
+      <div class="button-row">
+        <button class="button" id="openVid" type="button">▶ Watch Video</button>
+        <a class="button" href="https://youtu.be/KxIGkvCm34E" target="_blank" rel="noopener noreferrer">Open on YouTube</a>
+      </div>
     </div>
 
-    <!-- S-SDLC / Socket.Dev Security Guide -->
+    <!-- S-SDLC / Socket.Dev Security Guide (MIDDLE) -->
     <div class="card">
       <h4>S-SDLC Security Alert Framework: Identifying and Mitigating Risks in Open-Source Packages</h4>
       <p>
@@ -179,7 +168,6 @@
       <p><strong>Why I did it:</strong> To give developers a clear, repeatable way to assess package risk and make informed decisions when introducing third-party code.</p>
       <p><strong>What I learned:</strong> Strengthened my understanding of software supply chain risk, vulnerability classification, and how to translate raw security alerts into developer-friendly guidance and documentation.</p>
 
-      <!-- Main S-SDLC PDF -->
       <iframe
         src="S-SDLCSocketDevAlertListingUpdated.docx.pdf"
         height="500px"
@@ -188,7 +176,6 @@
       </iframe>
       <a class="pdf-link" href="S-SDLCSocketDevAlertListingUpdated.docx.pdf" target="_blank">📄 Open Full Report</a>
 
-      <!-- Related process flowchart -->
       <h5 class="sub-heading">Related Process Flow – Socket Security Review Workflow</h5>
       <iframe
         src="Updated_Socket_Flow_Chart_Redacted.pdf"
@@ -197,6 +184,26 @@
         title="Socket Security Process Flowchart PDF Preview">
       </iframe>
       <a class="pdf-link" href="Updated_Socket_Flow_Chart_Redacted.pdf" target="_blank">📄 View Process Flowchart</a>
+    </div>
+
+    <!-- AI Content Moderation Report (BOTTOM) -->
+    <div class="card">
+      <h4>AI Content Moderation: A Critical Examination of AI in Social Media and Future Directions</h4>
+      <p>
+        A research report exploring how artificial intelligence can be applied to social media moderation.
+        I analyzed algorithms for detecting harmful content, user behavior patterns, and bot activity, while
+        also addressing ethical and privacy concerns around automated decision-making.
+      </p>
+      <p><strong>Why I did it:</strong> To connect academic research with real-world cybersecurity and online safety challenges.</p>
+      <p><strong>What I learned:</strong> Gained deeper insight into AI-driven moderation techniques, algorithmic bias, and the tradeoffs between automation, privacy, and platform security.</p>
+
+      <iframe
+        src="CS4930.pdf"
+        height="500px"
+        class="pdf-frame"
+        title="AI Content Moderation Report PDF Preview">
+      </iframe>
+      <a class="pdf-link" href="CS4930.pdf" target="_blank">📄 Open Full Report</a>
     </div>
 
     <!-- Placeholder for future projects -->
@@ -219,6 +226,24 @@
   <p>© 2025 Justin Rodriguez</p>
 </footer>
 
+<!-- VIDEO MODAL -->
+<div id="vidModal" class="modal" aria-hidden="true">
+  <div class="modalBox" role="dialog" aria-label="Portfolio Video">
+    <button id="closeVid" class="modalClose" type="button" aria-label="Close">✕</button>
+
+    <div class="videoWrap">
+      <iframe
+        id="ytFrame"
+        src="https://www.youtube-nocookie.com/embed/KxIGkvCm34E"
+        title="Portfolio Video"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </div>
+</div>
+
 <script>
   const toggle = document.getElementById('menu-toggle');
   const menu = document.getElementById('menu');
@@ -234,6 +259,38 @@
     link.addEventListener('click', () => {
       menu.classList.remove('show');
     });
+  });
+
+  // Video modal
+  const vidModal = document.getElementById("vidModal");
+  const openVidBtn = document.getElementById("openVid");
+  const closeVidBtn = document.getElementById("closeVid");
+  const ytFrame = document.getElementById("ytFrame");
+  const ytBaseSrc = ytFrame.src;
+
+  function openVideoModal() {
+    vidModal.style.display = "block";
+    vidModal.setAttribute("aria-hidden", "false");
+    ytFrame.src = ytBaseSrc + "?autoplay=1&rel=0";
+  }
+
+  function closeVideoModal() {
+    vidModal.style.display = "none";
+    vidModal.setAttribute("aria-hidden", "true");
+    ytFrame.src = ytBaseSrc; // stops playback
+  }
+
+  openVidBtn.addEventListener("click", openVideoModal);
+  closeVidBtn.addEventListener("click", closeVideoModal);
+
+  // Click outside box closes modal
+  vidModal.addEventListener("click", (e) => {
+    if (e.target === vidModal) closeVideoModal();
+  });
+
+  // ESC closes modal
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && vidModal.style.display === "block") closeVideoModal();
   });
 </script>
 
