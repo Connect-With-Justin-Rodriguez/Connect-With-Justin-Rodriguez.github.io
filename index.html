@@ -139,31 +139,50 @@
     <h3>Selected Projects</h3>
 
     <!-- 1) Video (FIRST) - uses your S-SDLC description -->
-    <div class="card">
-      <h4>S-SDLC Security Alert Framework: Identifying and Mitigating Risks in Open-Source Packages</h4>
-      <p>
-        A structured security guide built from Socket.Dev alerts to help development teams evaluate open-source
-        software packages and their dependencies. The document defines severity levels (critical, high, medium, low),
-        describes the associated risks, and provides mitigation steps to protect application integrity throughout the
-        secure software development lifecycle.
-      </p>
-      <p><strong>Why I did it:</strong> To give developers a clear, repeatable way to assess package risk and make informed decisions when introducing third-party code.</p>
-      <p><strong>What I learned:</strong> Strengthened my understanding of software supply chain risk, vulnerability classification, and how to translate raw security alerts into developer-friendly guidance and documentation.</p>
+<div class="card">
+  <h4>Project Spotlight: Secure Encrypted Chat Dashboard</h4>
 
-      <div class="video-embed">
-        <iframe
-          src="https://www.youtube-nocookie.com/embed/KxIGkvCm34E?rel=0&playsinline=1"
-          title="S-SDLC Security Alert Framework Video"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen>
-        </iframe>
-      </div>
+  <p>
+    I built a Python based desktop application using Tkinter to make cryptography practical.
+    It allows users to securely encrypt and decrypt text or files using AES, DES, and 3DES.
+    The tool focuses on real world security by using PBKDF2 and a salt to turn passphrases
+    into strong cryptographic keys. It also includes a real time performance logger and
+    graph to compare the speed of each algorithm.
+  </p>
 
-      <div class="button-row">
-        <a class="button" href="https://youtu.be/KxIGkvCm34E" target="_blank" rel="noopener noreferrer">Open on YouTube</a>
-      </div>
-    </div>
+  <p>
+    <strong>Why I Did It:</strong>
+    My goal was to move beyond theory and tackle the practical challenges of encryption.
+    I wanted to understand how algorithms behave in real systems, how to securely manage
+    passphrases using SHA 256 hashing and key derivation, and what engineering issues arise
+    during implementation. When I encountered compatibility issues with Python’s native
+    cryptography libraries, I integrated OpenSSL through subprocess calls to ensure
+    reliability at the system level.
+  </p>
+
+  <p><strong>What I Learned:</strong></p>
+  <ul>
+    <li>Developed a strong understanding of secure passphrase handling using PBKDF2 and SHA 256, and the distinction between a passphrase and a cryptographic key.</li>
+    <li>Measured and compared encryption and decryption performance using high resolution timing, confirming AES as the fastest and observing unexpected real world differences between DES and 3DES.</li>
+    <li>Gained hands on experience integrating system level tools like OpenSSL into a Python application for broader compatibility.</li>
+    <li>Connected GUI design, user input validation, encryption logic, file handling, and performance analysis into a single cohesive application.</li>
+  </ul>
+
+  <div class="video-embed">
+    <iframe
+      src="https://www.youtube-nocookie.com/embed/KxIGkvCm34E?rel=0&playsinline=1"
+      title="Secure Encrypted Chat Dashboard Video"
+      allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen>
+    </iframe>
+  </div>
+
+  <div class="button-row">
+    <a class="button" href="https://youtu.be/KxIGkvCm34E" target="_blank" rel="noopener noreferrer">
+      Open on YouTube
+    </a>
+  </div>
+</div>
 
     <!-- 2) S-SDLC PDF (MIDDLE) -->
     <div class="card">
