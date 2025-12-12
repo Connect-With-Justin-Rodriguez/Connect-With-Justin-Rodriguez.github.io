@@ -97,6 +97,9 @@ header h2 {
   font-weight: 600;
   transition: background 0.3s ease, transform 0.1s ease, box-shadow 0.1s ease;
   box-shadow: 0 2px 4px rgba(15, 23, 42, 0.25);
+  border: none;            /* so <button class="button"> matches <a class="button"> */
+  cursor: pointer;         /* so it behaves like a button */
+  font: inherit;           /* match your site font */
 }
 
 .button:hover {
@@ -378,4 +381,56 @@ footer {
     flex-direction: column;
     align-items: flex-start;
   }
+}
+
+/* ---------- Video Modal (YouTube popup) ---------- */
+.modal{
+  display:none;
+  position:fixed;
+  inset:0;
+  background: rgba(0,0,0,0.65);
+  padding:24px;
+  z-index:9999;
+}
+
+.modalBox{
+  max-width: 860px;
+  margin: 10vh auto;
+  background: var(--card-bg);
+  color: var(--card-text);
+  padding: 1rem 1rem 1.1rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow-soft-hover);
+  border: 1px solid var(--nav-border);
+}
+
+.modalClose{
+  float:right;
+  background: transparent;
+  border: 0;
+  color: var(--card-text);
+  font-size: 18px;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  border-radius: 8px;
+}
+
+.modalClose:hover{
+  background: rgba(37, 99, 235, 0.12);
+}
+
+.videoWrap{
+  position: relative;
+  padding-top: 56.25%;
+  margin-top: 0.75rem;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+}
+
+.videoWrap iframe{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
 }
