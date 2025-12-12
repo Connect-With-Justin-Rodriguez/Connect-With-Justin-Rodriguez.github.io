@@ -1,4 +1,3 @@
-/* ---------- Color System (Light by default) ---------- */
 :root {
   --bg: #f4f6f9;
   --text: #111827;
@@ -10,60 +9,18 @@
   --accent-dark: #1e40af;
   --tile-bg: #e5e7eb;
   --pill-bg: #e5e7eb;
-  --muted-text: #6b7280;
   --card-bg: #ffffff;
-  --card-text: #111827;
   --footer-bg: #1f2937;
   --footer-text: #9ca3af;
-  --shadow-soft: 0 4px 6px rgba(0,0,0,0.1);
-  --shadow-soft-hover: 0 6px 12px rgba(0,0,0,0.15);
-  --nav-border: #374151;
-  --menu-toggle-hover-bg: #020617;
-}
-
-/* ---------- Dark mode (system preference) ---------- */
-@media (prefers-color-scheme: dark) {
-  :root {
-    color-scheme: dark;
-    --bg: #020617;
-    --text: #e5e7eb;
-    --header-bg: #020617;
-    --header-text: #e5e7eb;
-    --nav-bg: #020617;
-    --nav-text: #e5e7eb;
-    --tile-bg: #111827;
-    --pill-bg: #111827;
-    --card-bg: #0b1120;
-    --card-text: #e5e7eb;
-    --footer-bg: #020617;
-    --footer-text: #6b7280;
-    --shadow-soft: 0 4px 10px rgba(0,0,0,0.6);
-    --shadow-soft-hover: 0 8px 20px rgba(0,0,0,0.8);
-    --nav-border: #1f2937;
-    --menu-toggle-hover-bg: #111827;
-  }
-}
-
-/* ---------- Global Reset ---------- */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  line-height: 1.6;
   background: var(--bg);
   color: var(--text);
 }
 
-/* ---------- Header ---------- */
 header {
   background: var(--header-bg);
   color: var(--header-text);
@@ -71,25 +28,9 @@ header {
   padding: 2rem 1rem;
 }
 
-header h1 {
-  margin: 0;
-  font-size: 2.5rem;
-}
-
-header h2 {
-  margin-top: 0.5rem;
-  font-weight: 400;
-  max-width: 750px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* ---------- Navigation ---------- */
 nav {
   background: var(--nav-bg);
-  color: var(--nav-text);
   padding: 0.5rem 1rem;
-  border-bottom: 1px solid var(--nav-border);
 }
 
 nav ul {
@@ -105,164 +46,57 @@ nav ul li a {
   color: var(--nav-text);
   text-decoration: none;
   font-weight: bold;
-  font-size: 0.95rem;
-}
-
-nav ul li a:hover {
-  color: #60a5fa;
 }
 
 .menu-toggle {
   display: none;
+  color: var(--nav-text);
   cursor: pointer;
-  font-size: 1rem;
-  font-weight: bold;
-  background: var(--nav-bg);
-  border: 1px solid var(--nav-border);
-  padding: 0.4rem 0.75rem;
-  border-radius: 4px;
-  width: fit-content;
-  margin: 0 auto;
-  user-select: none;
 }
 
-.menu-toggle:hover {
-  background: var(--menu-toggle-hover-bg);
-}
-
-/* ---------- Main Layout ---------- */
 main {
   max-width: 1000px;
-  margin: 0 auto;
-  padding: 0 1rem 2rem;
+  margin: auto;
+  padding: 0 1rem;
 }
 
 section {
   padding: 2rem 0;
 }
 
-section h3 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-  border-bottom: 2px solid var(--accent);
-  display: inline-block;
-  padding-bottom: 0.3rem;
-}
-
-/* ---------- Cards ---------- */
 .card {
   background: var(--card-bg);
-  color: var(--card-text);
   border-radius: 8px;
   padding: 1.5rem;
   margin-bottom: 1.5rem;
-  box-shadow: var(--shadow-soft);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-soft-hover);
-}
-
-.card h4 {
-  margin-top: 0;
-  color: var(--accent);
-}
-
-/* ---------- Buttons ---------- */
 .button {
   background: var(--accent);
   color: #fff;
   padding: 0.6rem 1.2rem;
-  margin: 0.3rem;
   border-radius: 5px;
   text-decoration: none;
-  display: inline-block;
-  font-weight: 600;
-  transition: background 0.3s ease, transform 0.1s ease, box-shadow 0.1s ease;
 }
 
-.button:hover {
-  background: var(--accent-dark);
-  transform: translateY(-1px);
-  box-shadow: 0 4px 8px rgba(15, 23, 42, 0.35);
-}
-
-.button-row {
-  margin-top: 1.5rem;
-}
-
-/* ---------- Tiles ---------- */
-.tile {
-  background: var(--tile-bg);
-  color: var(--text);
-  display: inline-block;
-  padding: 0.8rem 1.2rem;
-  margin: 0.4rem;
-  border-radius: 5px;
-  font-weight: bold;
-}
-
-/* ---------- Skills ---------- */
 .skills {
   list-style: none;
   padding: 0;
-  margin: 0;
   display: flex;
-  flex-wrap: wrap;
   gap: 0.5rem;
+  flex-wrap: wrap;
 }
 
 .skills li {
   background: var(--pill-bg);
   padding: 0.5rem 0.9rem;
   border-radius: 999px;
-  font-size: 0.95rem;
 }
 
-/* ---------- Testimonials ---------- */
-.testimonial-card {
-  background: var(--card-bg);
-  color: var(--card-text);
-  border-radius: 8px;
-  padding: 1.5rem;
-  box-shadow: var(--shadow-soft);
-  border-left: 4px solid var(--accent);
-}
-
-.testimonial-quote {
-  margin: 0 0 0.9rem;
-  font-style: italic;
-}
-
-.testimonial-meta {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.75rem;
-  font-size: 0.9rem;
-}
-
-.testimonial-name {
-  font-weight: 600;
-}
-
-.testimonial-title {
-  color: var(--muted-text);
-}
-
-/* ---------- Video Embed ---------- */
 .video-embed {
   position: relative;
   padding-top: 56.25%;
-  margin-top: 0.75rem;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: var(--shadow-soft);
-  border: 1px solid var(--nav-border);
-  background: var(--card-bg);
+  margin-top: 1rem;
 }
 
 .video-embed iframe {
@@ -272,7 +106,6 @@ section h3 {
   height: 100%;
 }
 
-/* ---------- Desktop vs Mobile Project Content ---------- */
 .desktop-only {
   display: block;
 }
@@ -281,47 +114,18 @@ section h3 {
   display: none;
 }
 
-/* ---------- Footer ---------- */
-footer {
-  text-align: center;
-  padding: 1rem;
-  background: var(--footer-bg);
-  color: var(--footer-text);
-  font-size: 0.85rem;
-}
-
-/* ---------- Responsive ---------- */
 @media (max-width: 768px) {
-  header {
-    padding: 1.5rem 1rem;
-  }
-
-  header h1 {
-    font-size: 2rem;
-  }
-
-  header h2 {
-    font-size: 0.95rem;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-
   nav ul {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5rem;
-    margin-top: 0.5rem;
     display: none;
+    flex-direction: column;
   }
 
   nav ul.show {
     display: flex;
   }
 
-  section {
-    padding: 1.5rem 0;
+  .menu-toggle {
+    display: block;
   }
 
   .desktop-only {
@@ -330,15 +134,5 @@ footer {
 
   .mobile-only {
     display: block;
-  }
-
-  .tile {
-    display: block;
-    width: 100%;
-  }
-
-  .testimonial-meta {
-    flex-direction: column;
-    align-items: flex-start;
   }
 }
