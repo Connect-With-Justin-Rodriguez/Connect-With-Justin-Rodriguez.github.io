@@ -1,50 +1,74 @@
-/* ---------- Color System (Light by default) ---------- */
+/* =========================================================
+   COLOR SYSTEM (LIGHT DEFAULT)
+   ========================================================= */
 :root {
   --bg: #f4f6f9;
   --text: #111827;
+
   --header-bg: #1f2937;
   --header-text: #f9fafb;
+
   --nav-bg: #111827;
   --nav-text: #f9fafb;
+  --nav-border: #374151;
+
   --accent: #2563eb;
   --accent-dark: #1e40af;
-  --tile-bg: #e5e7eb;
-  --pill-bg: #e5e7eb;
-  --muted-text: #6b7280;
+
   --card-bg: #ffffff;
   --card-text: #111827;
+
+  --tile-bg: #e5e7eb;
+  --pill-bg: #e5e7eb;
+
+  --muted-text: #6b7280;
+
   --footer-bg: #1f2937;
   --footer-text: #9ca3af;
+
   --shadow-soft: 0 4px 6px rgba(0,0,0,0.1);
   --shadow-soft-hover: 0 6px 12px rgba(0,0,0,0.15);
-  --nav-border: #374151;
-  --menu-toggle-hover-bg: #020617;
 }
 
-/* Dark mode that follows system setting */
+/* =========================================================
+   DARK MODE (FOLLOWS SYSTEM)
+   ========================================================= */
 @media (prefers-color-scheme: dark) {
   :root {
     color-scheme: dark;
+
     --bg: #020617;
     --text: #e5e7eb;
+
     --header-bg: #020617;
     --header-text: #e5e7eb;
+
     --nav-bg: #020617;
     --nav-text: #e5e7eb;
-    --tile-bg: #111827;
-    --pill-bg: #111827;
+    --nav-border: #1f2937;
+
+    --accent: #3b82f6;
+    --accent-dark: #2563eb;
+
     --card-bg: #0b1120;
     --card-text: #e5e7eb;
+
+    --tile-bg: #111827;
+    --pill-bg: #111827;
+
+    --muted-text: #9ca3af;
+
     --footer-bg: #020617;
     --footer-text: #6b7280;
-    --shadow-soft: 0 4px 10px rgba(0,0,0,0.6);
-    --shadow-soft-hover: 0 8px 20px rgba(0,0,0,0.8);
-    --nav-border: #1f2937;
-    --menu-toggle-hover-bg: #111827;
+
+    --shadow-soft: 0 6px 14px rgba(0,0,0,0.6);
+    --shadow-soft-hover: 0 10px 26px rgba(0,0,0,0.8);
   }
 }
 
-/* ---------- Global Reset ---------- */
+/* =========================================================
+   GLOBAL RESET
+   ========================================================= */
 *,
 *::before,
 *::after {
@@ -56,15 +80,16 @@ html {
 }
 
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
-  padding: 0;
-  line-height: 1.6;
+  font-family: Arial, sans-serif;
   background: var(--bg);
   color: var(--text);
+  line-height: 1.6;
 }
 
-/* ---------- Header ---------- */
+/* =========================================================
+   HEADER
+   ========================================================= */
 header {
   background: var(--header-bg);
   color: var(--header-text);
@@ -74,106 +99,57 @@ header {
 
 header h1 {
   margin: 0;
-  font-size: 2.5rem;
+  font-size: 2.4rem;
 }
 
 header h2 {
-  margin: 0.5rem 0 0;
+  margin: 0.5rem auto 0;
   font-weight: 400;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 750px;
 }
 
-/* ---------- Buttons ---------- */
-.button {
-  background: var(--accent);
-  color: #fff;
-  padding: 0.6rem 1.2rem;
-  margin: 0.3rem;
-  border-radius: 5px;
-  text-decoration: none;
-  display: inline-block;
-  font-weight: 600;
-  transition: background 0.3s ease, transform 0.1s ease, box-shadow 0.1s ease;
-  box-shadow: 0 2px 4px rgba(15, 23, 42, 0.25);
-
-  /* makes <button class="button"> match <a class="button"> */
-  border: none;
-  cursor: pointer;
-  font: inherit;
-}
-
-.button:hover {
-  background: var(--accent-dark);
-  transform: translateY(-1px);
-  box-shadow: 0 4px 8px rgba(15, 23, 42, 0.35);
-}
-
-.button-row {
-  margin-top: 1.5rem;
-}
-
-/* ---------- Navigation ---------- */
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
 nav {
   background: var(--nav-bg);
-  color: var(--nav-text);
-  padding: 0.5rem 1rem;
-  position: relative;
-  z-index: 1000;
   border-bottom: 1px solid var(--nav-border);
+  padding: 0.5rem 1rem;
 }
 
 nav ul {
   list-style: none;
   display: flex;
   justify-content: center;
+  gap: 1.4rem;
   margin: 0;
   padding: 0;
-  gap: 1.5rem;
-}
-
-nav ul li {
-  margin: 0;
 }
 
 nav ul li a {
   color: var(--nav-text);
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
   font-size: 0.95rem;
 }
 
 nav ul li a:hover {
-  color: #60a5fa;
+  color: var(--accent);
 }
 
 .menu-toggle {
   display: none;
-  cursor: pointer;
-  font-size: 1rem;
-  font-weight: bold;
-  background: var(--nav-bg);
-  border: 1px solid var(--nav-border);
-  padding: 0.4rem 0.75rem;
-  border-radius: 4px;
-  width: fit-content;
-  margin: 0 auto;
-  user-select: none;
 }
 
-.menu-toggle:hover {
-  background: var(--menu-toggle-hover-bg);
-}
-
-/* ---------- Main Layout ---------- */
+/* =========================================================
+   MAIN LAYOUT
+   ========================================================= */
 main {
   max-width: 1000px;
   margin: 0 auto;
   padding: 0 1rem 2rem;
 }
 
-/* Sections */
 section {
   padding: 2rem 0;
 }
@@ -186,7 +162,9 @@ section h3 {
   padding-bottom: 0.3rem;
 }
 
-/* ---------- Cards ---------- */
+/* =========================================================
+   CARDS
+   ========================================================= */
 .card {
   background: var(--card-bg);
   color: var(--card-text);
@@ -198,7 +176,7 @@ section h3 {
 }
 
 .card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-3px);
   box-shadow: var(--shadow-soft-hover);
 }
 
@@ -207,29 +185,44 @@ section h3 {
   color: var(--accent);
 }
 
-/* Optional sub-heading style (you used it in HTML) */
-.sub-heading {
-  margin: 1.25rem 0 0.5rem;
-  color: var(--muted-text);
-  font-weight: 700;
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+.button {
+  display: inline-block;
+  margin-top: 1rem;
+  background: var(--accent);
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.25s ease;
 }
 
-/* ---------- Tiles (Education) ---------- */
+.button:hover {
+  background: var(--accent-dark);
+}
+
+.button-row {
+  margin-top: 1.2rem;
+}
+
+/* =========================================================
+   TILES / SKILLS
+   ========================================================= */
 .tile {
   background: var(--tile-bg);
-  color: var(--text);
+  padding: 0.7rem 1.1rem;
+  border-radius: 6px;
   display: inline-block;
-  padding: 0.8rem 1.2rem;
-  margin: 0.4rem;
-  border-radius: 5px;
-  font-weight: bold;
+  margin: 0.35rem;
+  font-weight: 600;
 }
 
-/* ---------- Skills ---------- */
 .skills {
   list-style: none;
   padding: 0;
-  margin: 0;
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
@@ -237,153 +230,104 @@ section h3 {
 
 .skills li {
   background: var(--pill-bg);
-  padding: 0.5rem 0.9rem;
+  padding: 0.45rem 0.9rem;
   border-radius: 999px;
-  font-size: 0.95rem;
-}
-
-/* ---------- Testimonial Card ---------- */
-.testimonial-card {
-  background: var(--card-bg);
-  color: var(--card-text);
-  border-radius: 8px;
-  padding: 1.5rem 1.5rem 1.25rem;
-  box-shadow: var(--shadow-soft);
-  border-left: 4px solid var(--accent);
-}
-
-.testimonial-quote {
-  margin: 0 0 0.9rem;
-  font-style: italic;
-}
-
-.testimonial-meta {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.75rem;
   font-size: 0.9rem;
 }
 
-.testimonial-person {
-  display: flex;
-  flex-direction: column;
-}
-
-.testimonial-name {
-  font-weight: 600;
-}
-
-.testimonial-title {
-  color: var(--muted-text);
-}
-
-.testimonial-link {
-  text-decoration: none;
-  color: var(--accent);
-  font-weight: 600;
-  padding: 0.35rem 0.75rem;
-  border-radius: 999px;
-  background: rgba(37, 99, 235, 0.08);
-}
-
-.testimonial-link:hover {
-  text-decoration: underline;
-}
-
-/* ---------- PDF Frame & Link ---------- */
+/* =========================================================
+   CENTERED VIDEO + PDF EMBEDS
+   ========================================================= */
+.video-embed,
 .pdf-frame {
-  width: 100%;
-  max-width: 100%;
-  border: none;
-  border-radius: 8px;
-  margin-top: 0.75rem;
-  box-shadow: var(--shadow-soft);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.pdf-link {
-  display: inline-block;
-  margin-top: 0.75rem;
-  text-decoration: none;
-  color: var(--accent);
-  font-weight: bold;
-}
-
-.pdf-link:hover {
-  text-decoration: underline;
-}
-
-/* ---------- Inline Video Embed ---------- */
-.video-embed{
+/* Video */
+.video-embed {
   position: relative;
+  width: 100%;
+  max-width: 900px;
   padding-top: 56.25%;
-  margin-top: 0.75rem;
+  margin-top: 1rem;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: var(--shadow-soft);
-  border: 1px solid var(--nav-border);
-  background: var(--card-bg);
 }
 
-.video-embed iframe{
+.video-embed iframe {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
 }
 
-/* ---------- Contact Section ---------- */
-#contact p {
-  max-width: 650px;
+/* PDFs */
+.pdf-frame {
+  width: 100%;
+  height: 500px;
+  border: none;
+  border-radius: 8px;
+  margin-top: 0.75rem;
+  box-shadow: var(--shadow-soft);
 }
 
-/* ---------- Footer ---------- */
+/* =========================================================
+   TESTIMONIAL
+   ========================================================= */
+.testimonial-card {
+  border-left: 4px solid var(--accent);
+}
+
+.testimonial-quote {
+  font-style: italic;
+}
+
+.testimonial-meta {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.testimonial-link {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
 footer {
-  text-align: center;
-  padding: 1rem;
   background: var(--footer-bg);
   color: var(--footer-text);
+  text-align: center;
+  padding: 1rem;
   font-size: 0.85rem;
 }
 
-/* ---------- Responsive Styles ---------- */
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
 @media (max-width: 768px) {
-  header {
-    padding: 1.5rem 1rem;
-  }
-
-  header h1 {
-    font-size: 2rem;
-  }
-
-  header h2 {
-    font-size: 0.95rem;
-  }
-
-  /* Show hamburger, stack menu */
-  .menu-toggle {
-    display: block;
-  }
-
   nav ul {
     flex-direction: column;
     align-items: flex-start;
-    gap: 0.5rem;
-    margin-top: 0.5rem;
-    display: none; /* hidden by default on small screens */
+    display: none;
   }
 
   nav ul.show {
-    display: flex; /* shown when .show is toggled */
+    display: flex;
   }
 
-  nav ul li {
-    margin: 0;
-  }
-
-  section {
-    padding: 1.5rem 0;
+  .menu-toggle {
+    display: block;
+    color: var(--nav-text);
+    cursor: pointer;
+    font-weight: bold;
   }
 }
 
@@ -397,16 +341,6 @@ footer {
   }
 
   .card {
-    padding: 1.1rem;
-  }
-
-  .tile {
-    display: block;
-    width: 100%;
-  }
-
-  .testimonial-meta {
-    flex-direction: column;
-    align-items: flex-start;
+    padding: 1.2rem;
   }
 }
