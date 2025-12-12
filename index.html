@@ -54,9 +54,9 @@
       </p>
 
       <div class="button-row">
-        <a class="button" href="https://www.linkedin.com/in/justin-rodriguez-1b7a5128b/" target="_blank">Connect on LinkedIn</a>
+        <a class="button" href="https://www.linkedin.com/in/justin-rodriguez-1b7a5128b/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a>
         <a class="button" href="mailto:justinrodriguez0728@gmail.com?subject=Cybersecurity%20Portfolio%20-%20Justin%20Rodriguez&body=Hello%20Justin,%20I%20reviewed%20your%20portfolio%20and%20would%20like%20to%20connect.">Email Me</a>
-        <a class="button" href="Justin_Rodriguez_Resume.pdf" target="_blank">View Resume (PDF)</a>
+        <a class="button" href="Justin_Rodriguez_Resume.pdf" target="_blank" rel="noopener noreferrer">View Resume (PDF)</a>
       </div>
     </div>
   </section>
@@ -125,14 +125,9 @@
       <div class="testimonial-meta">
         <div class="testimonial-person">
           <span class="testimonial-name">Aaron Eaton</span>
-          <span class="testimonial-title"> Professional Mentor</span>
+          <span class="testimonial-title">Professional Mentor</span>
         </div>
-        <a
-          class="testimonial-link"
-          href="https://www.linkedin.com/in/aaron-eaton-624090b2/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a class="testimonial-link" href="https://www.linkedin.com/in/aaron-eaton-624090b2/" target="_blank" rel="noopener noreferrer">
           View Aaron on LinkedIn
         </a>
       </div>
@@ -143,22 +138,36 @@
   <section id="projects">
     <h3>Selected Projects</h3>
 
-    <!-- NEW: Video Project (FIRST) -->
+    <!-- 1) VIDEO (FIRST) - uses the exact text you pasted -->
     <div class="card">
-      <h4>Portfolio Video</h4>
+      <h4>S-SDLC Security Alert Framework: Identifying and Mitigating Risks in Open-Source Packages (Video)</h4>
       <p>
-        A short walkthrough video I use to showcase my background, interests, and the kind of work I’m building in cybersecurity.
+        A structured security guide built from Socket.Dev alerts to help development teams evaluate open-source
+        software packages and their dependencies. The document defines severity levels (critical, high, medium, low),
+        describes the associated risks, and provides mitigation steps to protect application integrity throughout the
+        secure software development lifecycle.
       </p>
+      <p><strong>Why I did it:</strong> To give developers a clear, repeatable way to assess package risk and make informed decisions when introducing third-party code.</p>
+      <p><strong>What I learned:</strong> Strengthened my understanding of software supply chain risk, vulnerability classification, and how to translate raw security alerts into developer-friendly guidance and documentation.</p>
+
+      <div class="video-embed">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/KxIGkvCm34E?rel=0&playsinline=1"
+          title="S-SDLC Security Alert Framework Video"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
 
       <div class="button-row">
-        <button class="button" id="openVid" type="button">▶ Watch Video</button>
         <a class="button" href="https://youtu.be/KxIGkvCm34E" target="_blank" rel="noopener noreferrer">Open on YouTube</a>
       </div>
     </div>
 
-    <!-- S-SDLC / Socket.Dev Security Guide (MIDDLE) -->
+    <!-- 2) S-SDLC PDF (MIDDLE) -->
     <div class="card">
-      <h4>S-SDLC Security Alert Framework: Identifying and Mitigating Risks in Open-Source Packages</h4>
+      <h4>S-SDLC Security Alert Framework: Identifying and Mitigating Risks in Open-Source Packages (Document)</h4>
       <p>
         A structured security guide built from Socket.Dev alerts to help development teams evaluate open-source
         software packages and their dependencies. The document defines severity levels (critical, high, medium, low),
@@ -174,7 +183,7 @@
         class="pdf-frame"
         title="S-SDLC Socket Dev Alert Listing PDF Preview">
       </iframe>
-      <a class="pdf-link" href="S-SDLCSocketDevAlertListingUpdated.docx.pdf" target="_blank">📄 Open Full Report</a>
+      <a class="pdf-link" href="S-SDLCSocketDevAlertListingUpdated.docx.pdf" target="_blank" rel="noopener noreferrer">📄 Open Full Report</a>
 
       <h5 class="sub-heading">Related Process Flow – Socket Security Review Workflow</h5>
       <iframe
@@ -183,10 +192,10 @@
         class="pdf-frame"
         title="Socket Security Process Flowchart PDF Preview">
       </iframe>
-      <a class="pdf-link" href="Updated_Socket_Flow_Chart_Redacted.pdf" target="_blank">📄 View Process Flowchart</a>
+      <a class="pdf-link" href="Updated_Socket_Flow_Chart_Redacted.pdf" target="_blank" rel="noopener noreferrer">📄 View Process Flowchart</a>
     </div>
 
-    <!-- AI Content Moderation Report (BOTTOM) -->
+    <!-- 3) AI Report (BOTTOM) -->
     <div class="card">
       <h4>AI Content Moderation: A Critical Examination of AI in Social Media and Future Directions</h4>
       <p>
@@ -203,10 +212,10 @@
         class="pdf-frame"
         title="AI Content Moderation Report PDF Preview">
       </iframe>
-      <a class="pdf-link" href="CS4930.pdf" target="_blank">📄 Open Full Report</a>
+      <a class="pdf-link" href="CS4930.pdf" target="_blank" rel="noopener noreferrer">📄 Open Full Report</a>
     </div>
 
-    <!-- Placeholder for future projects -->
+    <!-- Future Projects -->
     <div class="card">
       <h4>Future Projects</h4>
       <p>Planned additions including automation tools, lab writeups, and more security-focused projects.</p>
@@ -226,71 +235,19 @@
   <p>© 2025 Justin Rodriguez</p>
 </footer>
 
-<!-- VIDEO MODAL -->
-<div id="vidModal" class="modal" aria-hidden="true">
-  <div class="modalBox" role="dialog" aria-label="Portfolio Video">
-    <button id="closeVid" class="modalClose" type="button" aria-label="Close">✕</button>
-
-    <div class="videoWrap">
-      <iframe
-        id="ytFrame"
-        src="https://www.youtube-nocookie.com/embed/KxIGkvCm34E"
-        title="Portfolio Video"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen
-      ></iframe>
-    </div>
-  </div>
-</div>
-
 <script>
   const toggle = document.getElementById('menu-toggle');
   const menu = document.getElementById('menu');
   const navLinks = menu.querySelectorAll('a');
 
-  // Toggle menu open/close on small screens
   toggle.addEventListener('click', () => {
     menu.classList.toggle('show');
   });
 
-  // Close menu after clicking a link (better mobile UX)
   navLinks.forEach(link => {
     link.addEventListener('click', () => {
       menu.classList.remove('show');
     });
-  });
-
-  // Video modal
-  const vidModal = document.getElementById("vidModal");
-  const openVidBtn = document.getElementById("openVid");
-  const closeVidBtn = document.getElementById("closeVid");
-  const ytFrame = document.getElementById("ytFrame");
-  const ytBaseSrc = ytFrame.src;
-
-  function openVideoModal() {
-    vidModal.style.display = "block";
-    vidModal.setAttribute("aria-hidden", "false");
-    ytFrame.src = ytBaseSrc + "?autoplay=1&rel=0";
-  }
-
-  function closeVideoModal() {
-    vidModal.style.display = "none";
-    vidModal.setAttribute("aria-hidden", "true");
-    ytFrame.src = ytBaseSrc; // stops playback
-  }
-
-  openVidBtn.addEventListener("click", openVideoModal);
-  closeVidBtn.addEventListener("click", closeVideoModal);
-
-  // Click outside box closes modal
-  vidModal.addEventListener("click", (e) => {
-    if (e.target === vidModal) closeVideoModal();
-  });
-
-  // ESC closes modal
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && vidModal.style.display === "block") closeVideoModal();
   });
 </script>
 
