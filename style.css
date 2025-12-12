@@ -1,4 +1,6 @@
-/* ---------- Color System (Light by default) ---------- */
+/* =========================================================
+   COLOR SYSTEM (Light by default)
+========================================================= */
 :root {
   --bg: #f4f6f9;
   --text: #111827;
@@ -21,7 +23,9 @@
   --menu-toggle-hover-bg: #020617;
 }
 
-/* Dark mode that follows system setting */
+/* =========================================================
+   DARK MODE (system preference)
+========================================================= */
 @media (prefers-color-scheme: dark) {
   :root {
     color-scheme: dark;
@@ -44,23 +48,28 @@
   }
 }
 
-/* ---------- Global Reset ---------- */
+/* =========================================================
+   GLOBAL RESET
+========================================================= */
 *,
 *::before,
-*::after { box-sizing: border-box; }
+*::after {
+  box-sizing: border-box;
+}
 
 html { scroll-behavior: smooth; }
 
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
-  padding: 0;
+  font-family: Arial, sans-serif;
   line-height: 1.6;
   background: var(--bg);
   color: var(--text);
 }
 
-/* ---------- Header ---------- */
+/* =========================================================
+   HEADER
+========================================================= */
 header {
   background: var(--header-bg);
   color: var(--header-text);
@@ -74,59 +83,30 @@ header h1 {
 }
 
 header h2 {
-  margin: 0.5rem 0 0;
+  margin-top: 0.5rem;
   font-weight: 400;
-  max-width: 700px;
+  max-width: 750px;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* ---------- Buttons ---------- */
-.button {
-  background: var(--accent);
-  color: #fff;
-  padding: 0.6rem 1.2rem;
-  margin: 0.3rem;
-  border-radius: 5px;
-  text-decoration: none;
-  display: inline-block;
-  font-weight: 600;
-  transition: background 0.3s ease, transform 0.1s ease, box-shadow 0.1s ease;
-  box-shadow: 0 2px 4px rgba(15, 23, 42, 0.25);
-
-  border: none;
-  cursor: pointer;
-  font: inherit;
-}
-
-.button:hover {
-  background: var(--accent-dark);
-  transform: translateY(-1px);
-  box-shadow: 0 4px 8px rgba(15, 23, 42, 0.35);
-}
-
-.button-row { margin-top: 1.5rem; }
-
-/* ---------- Navigation ---------- */
+/* =========================================================
+   NAVIGATION
+========================================================= */
 nav {
   background: var(--nav-bg);
-  color: var(--nav-text);
-  padding: 0.5rem 1rem;
-  position: relative;
-  z-index: 1000;
   border-bottom: 1px solid var(--nav-border);
+  padding: 0.5rem 1rem;
 }
 
 nav ul {
   list-style: none;
   display: flex;
   justify-content: center;
+  gap: 1.5rem;
   margin: 0;
   padding: 0;
-  gap: 1.5rem;
 }
-
-nav ul li { margin: 0; }
 
 nav ul li a {
   color: var(--nav-text);
@@ -140,7 +120,6 @@ nav ul li a:hover { color: #60a5fa; }
 .menu-toggle {
   display: none;
   cursor: pointer;
-  font-size: 1rem;
   font-weight: bold;
   background: var(--nav-bg);
   border: 1px solid var(--nav-border);
@@ -148,19 +127,24 @@ nav ul li a:hover { color: #60a5fa; }
   border-radius: 4px;
   width: fit-content;
   margin: 0 auto;
-  user-select: none;
 }
 
-.menu-toggle:hover { background: var(--menu-toggle-hover-bg); }
+.menu-toggle:hover {
+  background: var(--menu-toggle-hover-bg);
+}
 
-/* ---------- Main Layout ---------- */
+/* =========================================================
+   MAIN LAYOUT
+========================================================= */
 main {
   max-width: 1000px;
   margin: 0 auto;
   padding: 0 1rem 2rem;
 }
 
-section { padding: 2rem 0; }
+section {
+  padding: 2rem 0;
+}
 
 section h3 {
   font-size: 1.8rem;
@@ -170,7 +154,9 @@ section h3 {
   padding-bottom: 0.3rem;
 }
 
-/* ---------- Cards ---------- */
+/* =========================================================
+   CARDS
+========================================================= */
 .card {
   background: var(--card-bg);
   color: var(--card-text);
@@ -191,17 +177,33 @@ section h3 {
   color: var(--accent);
 }
 
-/* sub-heading used in projects */
-.sub-heading {
-  margin: 1.25rem 0 0.5rem;
-  color: var(--muted-text);
-  font-weight: 700;
+/* =========================================================
+   BUTTONS
+========================================================= */
+.button {
+  background: var(--accent);
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  margin: 0.3rem;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: 600;
+  transition: background 0.3s ease, transform 0.1s ease;
 }
 
-/* ---------- Tiles (Education) ---------- */
+.button:hover {
+  background: var(--accent-dark);
+  transform: translateY(-1px);
+}
+
+.button-row { margin-top: 1.2rem; }
+
+/* =========================================================
+   TILES (EDUCATION)
+========================================================= */
 .tile {
   background: var(--tile-bg);
-  color: var(--text);
   display: inline-block;
   padding: 0.8rem 1.2rem;
   margin: 0.4rem;
@@ -209,11 +211,12 @@ section h3 {
   font-weight: bold;
 }
 
-/* ---------- Skills ---------- */
+/* =========================================================
+   SKILLS
+========================================================= */
 .skills {
   list-style: none;
   padding: 0;
-  margin: 0;
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
@@ -226,126 +229,83 @@ section h3 {
   font-size: 0.95rem;
 }
 
-/* ---------- Testimonial Card ---------- */
+/* =========================================================
+   TESTIMONIAL
+========================================================= */
 .testimonial-card {
   background: var(--card-bg);
-  color: var(--card-text);
-  border-radius: 8px;
-  padding: 1.5rem 1.5rem 1.25rem;
-  box-shadow: var(--shadow-soft);
   border-left: 4px solid var(--accent);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: var(--shadow-soft);
 }
 
 .testimonial-quote {
-  margin: 0 0 0.9rem;
   font-style: italic;
+  margin-bottom: 0.9rem;
 }
 
-.testimonial-meta {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.75rem;
-  font-size: 0.9rem;
-}
-
-.testimonial-person { display: flex; flex-direction: column; }
-
-.testimonial-name { font-weight: 600; }
-
-.testimonial-title { color: var(--muted-text); }
-
-.testimonial-link {
-  text-decoration: none;
-  color: var(--accent);
-  font-weight: 600;
-  padding: 0.35rem 0.75rem;
-  border-radius: 999px;
-  background: rgba(37, 99, 235, 0.08);
-}
-
-.testimonial-link:hover { text-decoration: underline; }
-
-/* ---------- PDF Frame & Link ---------- */
-.pdf-frame {
-  width: 100%;
-  max-width: 100%;
-  border: none;
-  border-radius: 8px;
-  margin-top: 0.75rem;
-  box-shadow: var(--shadow-soft);
-}
-
-.pdf-link {
-  display: inline-block;
-  margin-top: 0.75rem;
-  text-decoration: none;
-  color: var(--accent);
-  font-weight: bold;
-}
-
-.pdf-link:hover { text-decoration: underline; }
-
-/* ---------- Inline Video Embed (mini display) ---------- */
-.video-embed{
+/* =========================================================
+   VIDEO EMBED
+========================================================= */
+.video-embed {
   position: relative;
   padding-top: 56.25%;
-  margin-top: 0.75rem;
+  margin-top: 1rem;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: var(--shadow-soft);
-  border: 1px solid var(--nav-border);
-  background: var(--card-bg);
 }
 
-.video-embed iframe{
+.video-embed iframe {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
 }
 
-/* ---------- Contact Section ---------- */
-#contact p { max-width: 650px; }
+/* =========================================================
+   RESPONSIVE PROJECT CONTENT
+========================================================= */
+.desktop-only { display: block; }
+.mobile-only { display: none; }
 
-/* ---------- Footer ---------- */
-footer {
-  text-align: center;
-  padding: 1rem;
-  background: var(--footer-bg);
-  color: var(--footer-text);
-  font-size: 0.85rem;
+@media (max-width: 768px) {
+  .desktop-only { display: none; }
+  .mobile-only { display: block; }
 }
 
-/* ---------- Responsive Styles ---------- */
+/* =========================================================
+   RESPONSIVE NAV & LAYOUT
+========================================================= */
 @media (max-width: 768px) {
-  header { padding: 1.5rem 1rem; }
   header h1 { font-size: 2rem; }
   header h2 { font-size: 0.95rem; }
 
   .menu-toggle { display: block; }
 
   nav ul {
+    display: none;
     flex-direction: column;
     align-items: flex-start;
-    gap: 0.5rem;
     margin-top: 0.5rem;
-    display: none;
   }
 
   nav ul.show { display: flex; }
 
-  section { padding: 1.5rem 0; }
+  .tile {
+    display: block;
+    width: 100%;
+  }
 }
 
-@media (max-width: 480px) {
-  header h1 { font-size: 1.7rem; }
-  header h2 { font-size: 0.9rem; }
-
-  .card { padding: 1.1rem; }
-
-  .tile { display: block; width: 100%; }
-
-  .testimonial-meta { flex-direction: column; align-items: flex-start; }
+/* =========================================================
+   FOOTER
+========================================================= */
+footer {
+  background: var(--footer-bg);
+  color: var(--footer-text);
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.85rem;
 }
