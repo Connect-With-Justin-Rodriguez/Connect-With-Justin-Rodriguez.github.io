@@ -1,6 +1,4 @@
-/* =========================================================
-   COLOR SYSTEM (Light by default)
-========================================================= */
+/* ---------- Color System (Light by default) ---------- */
 :root {
   --bg: #f4f6f9;
   --text: #111827;
@@ -23,9 +21,7 @@
   --menu-toggle-hover-bg: #020617;
 }
 
-/* =========================================================
-   DARK MODE (system preference)
-========================================================= */
+/* ---------- Dark mode (system preference) ---------- */
 @media (prefers-color-scheme: dark) {
   :root {
     color-scheme: dark;
@@ -48,16 +44,16 @@
   }
 }
 
-/* =========================================================
-   GLOBAL RESET
-========================================================= */
+/* ---------- Global Reset ---------- */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   margin: 0;
@@ -67,9 +63,7 @@ body {
   color: var(--text);
 }
 
-/* =========================================================
-   HEADER
-========================================================= */
+/* ---------- Header ---------- */
 header {
   background: var(--header-bg);
   color: var(--header-text);
@@ -90,13 +84,12 @@ header h2 {
   margin-right: auto;
 }
 
-/* =========================================================
-   NAVIGATION
-========================================================= */
+/* ---------- Navigation ---------- */
 nav {
   background: var(--nav-bg);
-  border-bottom: 1px solid var(--nav-border);
+  color: var(--nav-text);
   padding: 0.5rem 1rem;
+  border-bottom: 1px solid var(--nav-border);
 }
 
 nav ul {
@@ -115,11 +108,14 @@ nav ul li a {
   font-size: 0.95rem;
 }
 
-nav ul li a:hover { color: #60a5fa; }
+nav ul li a:hover {
+  color: #60a5fa;
+}
 
 .menu-toggle {
   display: none;
   cursor: pointer;
+  font-size: 1rem;
   font-weight: bold;
   background: var(--nav-bg);
   border: 1px solid var(--nav-border);
@@ -127,15 +123,14 @@ nav ul li a:hover { color: #60a5fa; }
   border-radius: 4px;
   width: fit-content;
   margin: 0 auto;
+  user-select: none;
 }
 
 .menu-toggle:hover {
   background: var(--menu-toggle-hover-bg);
 }
 
-/* =========================================================
-   MAIN LAYOUT
-========================================================= */
+/* ---------- Main Layout ---------- */
 main {
   max-width: 1000px;
   margin: 0 auto;
@@ -154,9 +149,7 @@ section h3 {
   padding-bottom: 0.3rem;
 }
 
-/* =========================================================
-   CARDS
-========================================================= */
+/* ---------- Cards ---------- */
 .card {
   background: var(--card-bg);
   color: var(--card-text);
@@ -177,9 +170,7 @@ section h3 {
   color: var(--accent);
 }
 
-/* =========================================================
-   BUTTONS
-========================================================= */
+/* ---------- Buttons ---------- */
 .button {
   background: var(--accent);
   color: #fff;
@@ -189,21 +180,23 @@ section h3 {
   text-decoration: none;
   display: inline-block;
   font-weight: 600;
-  transition: background 0.3s ease, transform 0.1s ease;
+  transition: background 0.3s ease, transform 0.1s ease, box-shadow 0.1s ease;
 }
 
 .button:hover {
   background: var(--accent-dark);
   transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(15, 23, 42, 0.35);
 }
 
-.button-row { margin-top: 1.2rem; }
+.button-row {
+  margin-top: 1.5rem;
+}
 
-/* =========================================================
-   TILES (EDUCATION)
-========================================================= */
+/* ---------- Tiles ---------- */
 .tile {
   background: var(--tile-bg);
+  color: var(--text);
   display: inline-block;
   padding: 0.8rem 1.2rem;
   margin: 0.4rem;
@@ -211,12 +204,11 @@ section h3 {
   font-weight: bold;
 }
 
-/* =========================================================
-   SKILLS
-========================================================= */
+/* ---------- Skills ---------- */
 .skills {
   list-style: none;
   padding: 0;
+  margin: 0;
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
@@ -229,32 +221,48 @@ section h3 {
   font-size: 0.95rem;
 }
 
-/* =========================================================
-   TESTIMONIAL
-========================================================= */
+/* ---------- Testimonials ---------- */
 .testimonial-card {
   background: var(--card-bg);
-  border-left: 4px solid var(--accent);
-  padding: 1.5rem;
+  color: var(--card-text);
   border-radius: 8px;
+  padding: 1.5rem;
   box-shadow: var(--shadow-soft);
+  border-left: 4px solid var(--accent);
 }
 
 .testimonial-quote {
+  margin: 0 0 0.9rem;
   font-style: italic;
-  margin-bottom: 0.9rem;
 }
 
-/* =========================================================
-   VIDEO EMBED
-========================================================= */
+.testimonial-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  font-size: 0.9rem;
+}
+
+.testimonial-name {
+  font-weight: 600;
+}
+
+.testimonial-title {
+  color: var(--muted-text);
+}
+
+/* ---------- Video Embed ---------- */
 .video-embed {
   position: relative;
   padding-top: 56.25%;
-  margin-top: 1rem;
+  margin-top: 0.75rem;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: var(--shadow-soft);
+  border: 1px solid var(--nav-border);
+  background: var(--card-bg);
 }
 
 .video-embed iframe {
@@ -264,48 +272,73 @@ section h3 {
   height: 100%;
 }
 
-/* =========================================================
-   RESPONSIVE PROJECT CONTENT
-========================================================= */
-.desktop-only { display: block; }
-.mobile-only { display: none; }
-
-@media (max-width: 768px) {
-  .desktop-only { display: none; }
-  .mobile-only { display: block; }
+/* ---------- Desktop vs Mobile Project Content ---------- */
+.desktop-only {
+  display: block;
 }
 
-/* =========================================================
-   RESPONSIVE NAV & LAYOUT
-========================================================= */
+.mobile-only {
+  display: none;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: var(--footer-bg);
+  color: var(--footer-text);
+  font-size: 0.85rem;
+}
+
+/* ---------- Responsive ---------- */
 @media (max-width: 768px) {
-  header h1 { font-size: 2rem; }
-  header h2 { font-size: 0.95rem; }
-
-  .menu-toggle { display: block; }
-
-  nav ul {
-    display: none;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-top: 0.5rem;
+  header {
+    padding: 1.5rem 1rem;
   }
 
-  nav ul.show { display: flex; }
+  header h1 {
+    font-size: 2rem;
+  }
+
+  header h2 {
+    font-size: 0.95rem;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    display: none;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  section {
+    padding: 1.5rem 0;
+  }
+
+  .desktop-only {
+    display: none;
+  }
+
+  .mobile-only {
+    display: block;
+  }
 
   .tile {
     display: block;
     width: 100%;
   }
-}
 
-/* =========================================================
-   FOOTER
-========================================================= */
-footer {
-  background: var(--footer-bg);
-  color: var(--footer-text);
-  text-align: center;
-  padding: 1rem;
-  font-size: 0.85rem;
+  .testimonial-meta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
