@@ -139,30 +139,36 @@
     <h3>Selected Projects</h3>
 
     <!-- 1) VIDEO (FIRST) - Encryption GUI project -->
-    <div class="card">
-      <h4>Encryption Chat Tool (Video)</h4>
-      <p>
-        A Python-based encryption tool with a simple GUI that lets users encrypt and decrypt text or files using common
-        symmetric encryption algorithms. It supports choosing an algorithm, using a passphrase, and saving outputs for
-        secure storage or sharing.
-      </p>
-      <p><strong>Why I did it:</strong> To build a hands-on project that connects core crypto concepts (keys, IVs, padding, KDFs) to a real tool with a usable interface.</p>
-      <p><strong>What I learned:</strong> Strengthened my understanding of AES vs DES/3DES, secure key derivation (PBKDF2), proper padding/unpadding, handling file encryption safely, and building a clean Tkinter UI.</p>
+ <div class="card">
+  <h4>Project Spotlight: Secure Encrypted Chat Dashboard</h4>
+  <p>
+    I built a Python-based desktop application using **Tkinter** to make cryptography practical. It allows users to securely encrypt and decrypt text or files using three major symmetric algorithms: **AES, DES, and 3DES**. The tool focuses on real-world security by using **PBKDF2** and a **salt** to turn passphrases into strong cryptographic keys. It also features a real-time performance logger and graph to compare the speed of the three algorithms.
+  </p>
+  
+  <p><strong>Why I Did It:</strong> My goal was to move beyond theory and tackle the practical challenges of encryption. I wanted to see how algorithms truly behave, how to securely manage user passphrases (using **SHA-256** hashing and key derivation), and what engineering issues arise. When I ran into compatibility problems with Python's native crypto libraries, I pivoted to integrating **OpenSSL** via subprocess calls, which taught me how encryption is handled at a robust, system level.</p>
+  
+  <p><strong>What I Learned:</strong></p>
+  <ul>
+    <li>**Practical Security:** Deepened my understanding of secure passphrase handling (**PBKDF2**/SHA-256) and the difference between a passphrase and a strong key.</li>
+    <li>**Algorithm Dynamics:** I empirically measured the speed of AES, DES, and 3DES. I learned that **AES is the fastest**, and surprisingly, in the tested scenario, standard DES took longer to encrypt than 3DES, highlighting real-world optimization differences.</li>
+    <li>**System Integration:** Gained critical experience integrating system-level tools like **OpenSSL** into a Python application for maximum compatibility and trust.</li>
+    <li>**Full-Stack Development:** Connected GUI design, user input validation, and complex backend file/crypto logic into a single, cohesive, and functional application.</li>
+  </ul>
 
-      <div class="video-embed">
-        <iframe
-          src="https://www.youtube-nocookie.com/embed/KxIGkvCm34E?rel=0&playsinline=1"
-          title="Encryption Chat Tool Video"
-          frameborder="0"
-          allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen>
-        </iframe>
-      </div>
+  <div class="video-embed">
+    <iframe
+      src="https://www.youtube-nocookie.com/embed/KxIGkvCm34E?rel=0&playsinline=1"
+      title="Encryption Chat Tool Video"
+      frameborder="0"
+      allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen>
+    </iframe>
+  </div>
 
-      <div class="button-row">
-        <a class="button" href="https://youtu.be/KxIGkvCm34E" target="_blank" rel="noopener noreferrer">Open on YouTube</a>
-      </div>
-    </div>
+  <div class="button-row">
+    <a class="button" href="https://youtu.be/KxIGkvCm34E" target="_blank" rel="noopener noreferrer">Open on YouTube</a>
+  </div>
+</div>
 
     <!-- 2) S-SDLC / Socket.Dev Security Guide (MIDDLE) -->
     <div class="card">
