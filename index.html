@@ -1,4 +1,3 @@
-<!-- index.html (FULL FILE) -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,9 +8,48 @@
 </head>
 <body>
 
-<header>
-  <h1>Justin Rodriguez</h1>
-  <h2>Network Security Operations Analyst • CySa+ • Security+ • B.A. Computer Science</h2>
+<header class="hero">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <div class="hero-kicker">Connect With</div>
+      <h1>Justin Rodriguez</h1>
+      <p class="hero-title">Network Security Operations Analyst</p>
+
+      <p class="hero-sub">
+        Blue-team focused. I monitor 200+ networks, investigate alerts, and support incident response using
+        SolarWinds, Cisco vManage, Juniper Mist, Citrix, and Microsoft Defender.
+      </p>
+
+      <div class="hero-cta">
+        <a class="button primary" href="Justin_Rodriguez_Resume.pdf" target="_blank" rel="noopener noreferrer">View Resume</a>
+        <a class="button" href="https://www.linkedin.com/in/justin-rodriguez-1b7a5128b/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a class="button" href="mailto:justinrodriguez0728@gmail.com?subject=Cybersecurity%20Portfolio%20-%20Justin%20Rodriguez">Email</a>
+      </div>
+
+      <div class="stat-row">
+        <div class="stat">
+          <div class="stat-number">200+</div>
+          <div class="stat-label">Networks monitored</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">Security+ / CySA+ / Network+</div>
+          <div class="stat-label">Certifications</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">NSOC</div>
+          <div class="stat-label">Incident response</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-media">
+      <!-- Avatar placeholder (no broken image). If you want a headshot:
+           1) Add headshot.jpg to your repo
+           2) Replace the div below with: <img class="hero-photo" src="headshot.jpg" alt="Justin Rodriguez headshot"> -->
+      <div class="avatar" aria-label="Justin Rodriguez avatar">JR</div>
+      <div class="avatar-caption">Tampa, FL • Open to opportunities</div>
+    </div>
+  </div>
 </header>
 
 <nav>
@@ -34,11 +72,12 @@
     <h3>Professional Summary</h3>
 
     <div class="card">
-      <p>
-        I’m Justin Rodriguez, a Network Security Operations Analyst specializing in event monitoring, incident response, and enterprise network defense.
-        I proactively monitor 200+ networks using tools like SolarWinds, Cisco vManage, Juniper Mist, Citrix, and Microsoft Defender, driving resolution during major incidents and escalating appropriately to restore services.
-        Certified in CompTIA Security+ and CySA+, I apply proven security practices to detect, analyze, and respond to threats in real time. My background includes a B.A. in Computer Science (Cyber Security focus) and an A.A.S. in Cyber Security, providing both the technical foundation and hands-on expertise to safeguard enterprise systems.
-      </p>
+      <ul class="bullets">
+        <li>Network Security Operations Analyst focused on security monitoring, triage, and incident response</li>
+        <li>Monitor 200+ networks; investigate alerts and performance/security issues using SolarWinds, vManage, Mist, Citrix, and Microsoft Defender</li>
+        <li>Translate technical findings into clear communication for cross-team resolution</li>
+        <li>Background: B.A. Computer Science (Cybersecurity) + A.A.S. Cybersecurity</li>
+      </ul>
     </div>
   </section>
 
@@ -47,17 +86,38 @@
     <h3>Career Focus & Opportunities</h3>
 
     <div class="card">
-      <p>
-        I am open to a wide range of cybersecurity roles where I can stay close to the technology, including blue team operations, SOC and NSOC analysis, cloud security, and security engineering.
-        I enjoy working directly with alerts, logs, and monitoring tools to understand what is happening in an environment and help the team respond quickly and effectively.
-        Through my internship and personal projects I have also created policies, diagrams, and security documentation, which strengthened my understanding of governance, risk, and compliance.
-        Long term, I hope to grow into GRC and security governance roles where I can connect day-to-day operations with broader organizational risk and compliance goals.
+      <p class="readable">
+        I’m open to a wide range of cybersecurity roles where I can stay close to the technology—especially blue team operations,
+        SOC/NSOC analysis, cloud security, and security engineering. I enjoy working directly with alerts, logs, and monitoring tools
+        to understand what’s happening in an environment and help the team respond quickly and effectively.
       </p>
 
+      <div class="split">
+        <div class="panel">
+          <h4 class="mini">Roles I’m open to</h4>
+          <ul class="bullets">
+            <li>SOC / NSOC Analyst</li>
+            <li>Security Operations / Blue Team</li>
+            <li>Cloud Security (Azure)</li>
+            <li>Security Engineering (junior)</li>
+          </ul>
+        </div>
+
+        <div class="panel">
+          <h4 class="mini">What I bring</h4>
+          <ul class="bullets">
+            <li>Strong alert triage + incident escalation habits</li>
+            <li>Comfortable with enterprise tooling & cross-team comms</li>
+            <li>Security documentation (policies, diagrams, writeups)</li>
+            <li>Continuous learning (AZ-500, SC-200, CMMC RP in progress)</li>
+          </ul>
+        </div>
+      </div>
+
       <div class="button-row">
+        <a class="button primary" href="Justin_Rodriguez_Resume.pdf" target="_blank" rel="noopener noreferrer">View Resume (PDF)</a>
         <a class="button" href="https://www.linkedin.com/in/justin-rodriguez-1b7a5128b/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a>
         <a class="button" href="mailto:justinrodriguez0728@gmail.com?subject=Cybersecurity%20Portfolio%20-%20Justin%20Rodriguez&body=Hello%20Justin,%20I%20reviewed%20your%20portfolio%20and%20would%20like%20to%20connect.">Email Me</a>
-        <a class="button" href="Justin_Rodriguez_Resume.pdf" target="_blank" rel="noopener noreferrer">View Resume (PDF)</a>
       </div>
     </div>
   </section>
@@ -68,7 +128,7 @@
 
     <div class="card">
       <h4>Rooms To Go – NSOC Analyst</h4>
-      <p>
+      <p class="readable">
         I work in the Network Security Operations Center monitoring more than 200 networks for both performance
         and security issues. I use tools like Juniper Mist, Cisco vManage, SolarWinds, and Microsoft Defender to
         investigate alerts, validate whether something is a real threat or a false positive, and coordinate with
@@ -79,7 +139,7 @@
 
     <div class="card">
       <h4>TheIncLab – Cybersecurity Intern</h4>
-      <p>
+      <p class="readable">
         I supported cybersecurity work for R&amp;D projects by helping apply the Risk Management Framework (RMF)
         and align controls with NIST and CMMC requirements. I wrote and edited security policies, built system and
         data flow diagrams, and monitored events with Wazuh SIEM. A big part of the role was turning technical
@@ -156,27 +216,33 @@
     <div class="card">
       <h4>Secure Encrypted Chat</h4>
 
-      <p>
-        I built a Python based desktop application using Tkinter to make cryptography practical.
+      <div class="tag-row">
+        <span class="tag">Python</span>
+        <span class="tag">Tkinter</span>
+        <span class="tag">AES / DES / 3DES</span>
+        <span class="tag">PBKDF2</span>
+        <span class="tag">OpenSSL</span>
+      </div>
+
+      <p class="readable">
+        I built a Python-based desktop application using Tkinter to make cryptography practical.
         It allows users to securely encrypt and decrypt text or files using AES, DES, and 3DES.
-        The tool focuses on real world security by using PBKDF2 and a salt to turn passphrases
-        into strong cryptographic keys. It also includes a real time performance logger and
+        The tool focuses on real-world security by using PBKDF2 and a salt to turn passphrases
+        into strong cryptographic keys. It also includes a real-time performance logger and
         graph to compare the speed of each algorithm.
       </p>
 
-      <p>
-        <strong>Why I Did It:</strong>
-        I built this project because I was tired of just reading about cryptography.
-        I wanted to jump into the deep end and see how AES, DES, and key derivation actually work in a real program.
-        My core motivation was to gain a hands-on understanding of secure passphrase management (using hashing like SHA-256) and how these algorithms behave in a real-world system.
+      <p class="readable">
+        <strong>Why I did it:</strong>
+        I wanted hands-on experience beyond theory—key derivation, encryption behavior, and secure passphrase handling in a real program.
       </p>
 
-      <p><strong>What I Learned:</strong></p>
+      <p><strong>What I learned:</strong></p>
       <ul>
-        <li>Developed a strong understanding of secure passphrase handling using PBKDF2 and SHA 256, and the distinction between a passphrase and a cryptographic key.</li>
-        <li>Measured and compared encryption and decryption performance using high resolution timing, confirming AES as the fastest and observing unexpected real world differences between DES and 3DES.</li>
-        <li>Gained hands on experience integrating system level tools like OpenSSL into a Python application for broader compatibility.</li>
-        <li>Connected GUI design, user input validation, encryption logic, file handling, and performance analysis into a single cohesive application.</li>
+        <li>Secure passphrase handling using PBKDF2 and SHA-256, and the difference between a passphrase and a cryptographic key</li>
+        <li>Measured encryption/decryption performance using high-resolution timing across multiple algorithms</li>
+        <li>Integrated system-level tools like OpenSSL for broader compatibility</li>
+        <li>Built a cohesive app: GUI + input validation + encryption logic + file handling + performance analysis</li>
       </ul>
 
       <div class="video-embed">
@@ -189,22 +255,28 @@
       </div>
 
       <div class="button-row">
-        <a class="button" href="https://youtu.be/KxIGkvCm34E" target="_blank" rel="noopener noreferrer">
-          Open on YouTube
-        </a>
+        <a class="button" href="https://youtu.be/KxIGkvCm34E" target="_blank" rel="noopener noreferrer">Open on YouTube</a>
       </div>
     </div>
 
     <div class="card">
       <h4>S-SDLC Security Alert Framework (Document)</h4>
-      <p>
+
+      <div class="tag-row">
+        <span class="tag">AppSec</span>
+        <span class="tag">Supply Chain</span>
+        <span class="tag">Documentation</span>
+        <span class="tag">Risk Triage</span>
+      </div>
+
+      <p class="readable">
         A structured security guide built from Socket.Dev alerts to help development teams evaluate open-source
         software packages and their dependencies. The document defines severity levels (critical, high, medium, low),
         describes the associated risks, and provides mitigation steps to protect application integrity throughout the
         secure software development lifecycle.
       </p>
-      <p><strong>Why I did it:</strong> To give developers a clear, repeatable way to assess package risk and make informed decisions when introducing third-party code.</p>
-      <p><strong>What I learned:</strong> Strengthened my understanding of software supply chain risk, vulnerability classification, and how to translate raw security alerts into developer-friendly guidance and documentation.</p>
+      <p class="readable"><strong>Why I did it:</strong> To give developers a clear, repeatable way to assess package risk and make informed decisions when introducing third-party code.</p>
+      <p class="readable"><strong>What I learned:</strong> Strengthened my understanding of software supply chain risk, vulnerability classification, and translating raw alerts into developer-friendly guidance.</p>
 
       <iframe
         src="S-SDLCSocketDevAlertListingUpdated.docx.pdf"
@@ -226,13 +298,21 @@
 
     <div class="card">
       <h4>AI Content Moderation: A Critical Examination of AI in Social Media and Future Directions</h4>
-      <p>
+
+      <div class="tag-row">
+        <span class="tag">Research</span>
+        <span class="tag">AI</span>
+        <span class="tag">Privacy</span>
+        <span class="tag">Platform Safety</span>
+      </div>
+
+      <p class="readable">
         A research report exploring how artificial intelligence can be applied to social media moderation.
         I analyzed algorithms for detecting harmful content, user behavior patterns, and bot activity, while
         also addressing ethical and privacy concerns around automated decision-making.
       </p>
-      <p><strong>Why I did it:</strong> To connect academic research with real-world cybersecurity and online safety challenges.</p>
-      <p><strong>What I learned:</strong> Gained deeper insight into AI-driven moderation techniques, algorithmic bias, and the tradeoffs between automation, privacy, and platform security.</p>
+      <p class="readable"><strong>Why I did it:</strong> To connect academic research with real-world cybersecurity and online safety challenges.</p>
+      <p class="readable"><strong>What I learned:</strong> Deeper insight into AI-driven moderation techniques, algorithmic bias, and tradeoffs between automation, privacy, and platform security.</p>
 
       <iframe
         src="CS4930.pdf"
@@ -245,15 +325,22 @@
 
     <div class="card">
       <h4>Future Projects</h4>
-      <p>Planned additions including automation tools, lab writeups, and more security-focused projects.</p>
+      <p class="readable">Planned additions including automation tools, lab writeups, and more security-focused projects.</p>
     </div>
   </section>
 
   <section id="contact">
     <h3>Contact & Networking</h3>
-    <p>
-      The easiest way to reach me is through the LinkedIn and email links in the Career Focus &amp; Opportunities section above.
-    </p>
+    <div class="card">
+      <p class="readable">
+        The easiest way to reach me is through LinkedIn or email.
+      </p>
+
+      <div class="button-row">
+        <a class="button primary" href="https://www.linkedin.com/in/justin-rodriguez-1b7a5128b/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a class="button" href="mailto:justinrodriguez0728@gmail.com?subject=Cybersecurity%20Portfolio%20-%20Justin%20Rodriguez">Email</a>
+      </div>
+    </div>
   </section>
 </main>
 
