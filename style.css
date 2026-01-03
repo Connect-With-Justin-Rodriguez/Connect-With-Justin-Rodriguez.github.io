@@ -1,4 +1,4 @@
-/* style.css (FULL FILE) */
+/* ---------- Base ---------- */
 :root {
   --bg: #060b18;
   --bg2: #050914;
@@ -7,11 +7,11 @@
   --text: rgba(255, 255, 255, 0.92);
   --muted: rgba(255, 255, 255, 0.70);
   --muted2: rgba(255, 255, 255, 0.55);
+  --accent: rgba(80, 170, 255, 0.90);
   --shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
 }
 
 * { box-sizing: border-box; }
-
 html { scroll-behavior: smooth; }
 
 body {
@@ -24,23 +24,132 @@ body {
     linear-gradient(180deg, var(--bg), var(--bg2));
 }
 
-header {
-  text-align: center;
-  padding: 42px 18px 18px;
+/* ---------- HERO ---------- */
+.hero {
+  padding: 46px 16px 18px;
 }
 
-header h1 {
-  margin: 0;
-  font-size: 2.2rem;
+.hero-inner {
+  max-width: 980px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: 24px;
+  align-items: center;
 }
 
-header h2 {
+.hero-kicker {
+  display: inline-block;
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.10);
+  color: rgba(255,255,255,0.75);
+  font-weight: 800;
+  font-size: 0.92rem;
+  letter-spacing: 0.2px;
+}
+
+.hero h1 {
   margin: 10px 0 0;
-  font-size: 1.05rem;
-  font-weight: 500;
-  color: var(--muted);
+  font-size: 2.4rem;
+  letter-spacing: 0.3px;
 }
 
+.hero-title {
+  margin: 10px 0 0;
+  font-size: 1.08rem;
+  font-weight: 800;
+  color: rgba(255,255,255,0.80);
+}
+
+.hero-sub {
+  margin: 12px 0 0;
+  color: rgba(255,255,255,0.70);
+  line-height: 1.6;
+  max-width: 62ch;
+}
+
+.hero-cta {
+  margin-top: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.hero-media {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar {
+  width: 230px;
+  height: 230px;
+  border-radius: 26px;
+  display: grid;
+  place-items: center;
+  font-weight: 950;
+  font-size: 3.2rem;
+  letter-spacing: 1px;
+  color: rgba(255,255,255,0.92);
+  background:
+    radial-gradient(900px 400px at 20% 10%, rgba(80, 170, 255, 0.35), transparent 55%),
+    radial-gradient(700px 500px at 80% 20%, rgba(255, 255, 255, 0.18), transparent 55%),
+    rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.12);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.55);
+}
+
+.hero-photo {
+  width: 230px;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 26px;
+  border: 1px solid rgba(255,255,255,0.12);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.55);
+}
+
+.avatar-caption {
+  color: rgba(255,255,255,0.65);
+  font-weight: 700;
+}
+
+/* Stats row */
+.stat-row {
+  margin-top: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.stat {
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.10);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.30);
+}
+
+.stat-number {
+  font-weight: 950;
+  letter-spacing: 0.2px;
+}
+
+.stat-label {
+  margin-top: 2px;
+  font-size: 0.92rem;
+  color: rgba(255,255,255,0.65);
+}
+
+@media (max-width: 860px) {
+  .hero-inner { grid-template-columns: 1fr; }
+  .hero-media { align-items: flex-start; }
+  .avatar, .hero-photo { width: 210px; height: 210px; }
+}
+
+/* ---------- Navigation ---------- */
 nav {
   position: sticky;
   top: 0;
@@ -55,7 +164,7 @@ nav {
   display: none;
   padding: 14px 16px;
   cursor: pointer;
-  font-weight: 600;
+  font-weight: 800;
   color: var(--text);
 }
 
@@ -75,7 +184,7 @@ nav a {
   border-radius: 12px;
   text-decoration: none;
   color: var(--text);
-  font-weight: 600;
+  font-weight: 800;
   font-size: 0.95rem;
   border: 1px solid rgba(255, 255, 255, 0.06);
   background: rgba(255, 255, 255, 0.04);
@@ -88,15 +197,14 @@ nav a:hover {
   border: 1px solid rgba(255, 255, 255, 0.10);
 }
 
+/* ---------- Layout ---------- */
 main {
   max-width: 980px;
   margin: 0 auto;
   padding: 18px 16px 60px;
 }
 
-section {
-  margin-top: 28px;
-}
+section { margin-top: 28px; }
 
 section h3 {
   margin: 0 0 14px;
@@ -105,12 +213,20 @@ section h3 {
   border-bottom: 2px solid rgba(255, 255, 255, 0.10);
 }
 
+/* ---------- Cards ---------- */
 .card, .testimonial-card {
   background: var(--card);
   border: 1px solid var(--border);
   border-radius: 18px;
   padding: 18px;
   box-shadow: var(--shadow);
+  transition: transform 120ms ease, background 120ms ease, border 120ms ease;
+}
+
+.card:hover, .testimonial-card:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(255, 255, 255, 0.14);
 }
 
 .card h4 {
@@ -118,17 +234,41 @@ section h3 {
   font-size: 1.15rem;
 }
 
-.card p {
-  margin: 10px 0;
+.readable {
   color: var(--muted);
-  line-height: 1.55;
+  line-height: 1.6;
+  max-width: 75ch;
 }
 
-.card ul {
-  margin: 10px 0 0 18px;
-  color: var(--muted);
+.card ul { color: var(--muted); }
+
+.mini {
+  margin: 0 0 8px;
+  font-size: 1rem;
+  font-weight: 900;
+  color: rgba(255,255,255,0.88);
 }
 
+/* Two-column panels inside Career Focus */
+.split {
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.panel {
+  padding: 14px 14px;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+@media (max-width: 820px) {
+  .split { grid-template-columns: 1fr; }
+}
+
+/* ---------- Buttons ---------- */
 .button-row {
   display: flex;
   flex-wrap: wrap;
@@ -146,7 +286,7 @@ section h3 {
   background: rgba(255, 255, 255, 0.06);
   color: var(--text);
   text-decoration: none;
-  font-weight: 700;
+  font-weight: 900;
   transition: transform 120ms ease, background 120ms ease, border 120ms ease;
 }
 
@@ -156,7 +296,22 @@ section h3 {
   border: 1px solid rgba(255, 255, 255, 0.14);
 }
 
-/* Tiles */
+.button.primary {
+  background: rgba(80,170,255,0.16);
+  border: 1px solid rgba(80,170,255,0.30);
+}
+
+/* ---------- Bullets ---------- */
+.bullets {
+  margin: 0;
+  padding-left: 18px;
+  color: rgba(255,255,255,0.70);
+  line-height: 1.65;
+}
+
+.bullets li { margin: 8px 0; }
+
+/* ---------- Tiles (Education/Certs chips) ---------- */
 .tile-row {
   display: flex;
   flex-wrap: wrap;
@@ -171,24 +326,22 @@ section h3 {
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(255, 255, 255, 0.10);
   box-shadow: 0 10px 22px rgba(0, 0, 0, 0.35);
-  font-weight: 700;
+  font-weight: 900;
   font-size: 0.95rem;
   color: var(--text);
 }
 
-/* Subtle highlight for in-progress (NO size change) */
 .tile.in-progress {
   background: rgba(80, 170, 255, 0.10);
   border: 1px solid rgba(80, 170, 255, 0.22);
 }
 
-/* Force clean rows in Education without changing tile size */
 #education .tile-break {
   flex-basis: 100%;
   height: 0;
 }
 
-/* Skills */
+/* ---------- Skills Pills ---------- */
 .skills {
   list-style: none;
   padding: 0;
@@ -208,11 +361,29 @@ section h3 {
   border: 1px solid rgba(255, 255, 255, 0.10);
   box-shadow: 0 10px 22px rgba(0, 0, 0, 0.35);
   color: var(--text);
-  font-weight: 700;
+  font-weight: 900;
   font-size: 0.95rem;
 }
 
-/* Testimonials */
+/* ---------- Tags (Projects) ---------- */
+.tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 10px 0 6px;
+}
+
+.tag {
+  padding: 8px 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.10);
+  color: rgba(255,255,255,0.75);
+  font-weight: 900;
+  font-size: 0.9rem;
+}
+
+/* ---------- Testimonials ---------- */
 .testimonial-quote {
   margin: 0 0 14px;
   color: var(--muted);
@@ -236,7 +407,7 @@ section h3 {
 }
 
 .testimonial-name {
-  font-weight: 800;
+  font-weight: 950;
   color: var(--text);
 }
 
@@ -248,14 +419,14 @@ section h3 {
 .testimonial-link {
   color: rgba(120, 200, 255, 0.95);
   text-decoration: none;
-  font-weight: 800;
+  font-weight: 950;
 }
 
-.testimonial-link:hover {
-  text-decoration: underline;
-}
+.testimonial-link:hover { text-decoration: underline; }
 
-/* Media */
+/* ---------- Media / Iframes ---------- */
+.sub-heading { margin: 18px 0 10px; color: var(--text); }
+
 .video-embed {
   margin-top: 14px;
   position: relative;
@@ -287,13 +458,12 @@ section h3 {
   margin-top: 10px;
   color: rgba(120, 200, 255, 0.95);
   text-decoration: none;
-  font-weight: 800;
+  font-weight: 950;
 }
 
-.pdf-link:hover {
-  text-decoration: underline;
-}
+.pdf-link:hover { text-decoration: underline; }
 
+/* ---------- Footer ---------- */
 footer {
   text-align: center;
   padding: 22px 14px 34px;
@@ -301,7 +471,7 @@ footer {
   border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-/* Responsive nav */
+/* ---------- Responsive Nav ---------- */
 @media (max-width: 720px) {
   .menu-toggle { display: block; }
 
