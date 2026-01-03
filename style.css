@@ -193,6 +193,29 @@ section h3{
   font-size: 1.15rem;
 }
 
+/* Experience card header (title + dates) */
+.card-head{
+  display:flex;
+  align-items:baseline;
+  justify-content:space-between;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-bottom:8px;
+}
+
+.card-date{
+  color: rgba(255,255,255,0.62);
+  font-weight: 850;
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+/* Make paragraphs inside cards slightly more readable */
+.card p{
+  color: rgba(255,255,255,0.78);
+  line-height: 1.6;
+}
+
 /* =========================
    BUTTONS
    ========================= */
@@ -226,6 +249,20 @@ section h3{
 .button.primary{
   background: rgba(80,170,255,0.16);
   border: 1px solid rgba(80,170,255,0.30);
+}
+
+/* =========================
+   BULLETS (used in experience + summary)
+   ========================= */
+.bullets{
+  margin: 0;
+  padding-left: 18px;
+  color: rgba(255,255,255,0.74);
+  line-height: 1.65;
+}
+
+.bullets li{
+  margin: 8px 0;
 }
 
 /* =========================
@@ -335,6 +372,7 @@ section h3{
   border: 1px solid rgba(255,255,255,0.10);
   background: rgba(0,0,0,0.25);
 }
+
 .video-embed iframe{
   position: absolute;
   inset: 0;
