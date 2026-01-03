@@ -45,9 +45,9 @@
       </div>
 
       <div class="hero-media">
-        <!-- Avatar placeholder so nothing breaks on GitHub Pages.
-             If you want a real headshot:
-             1) Add headshot.jpg to repo
+        <!-- Avatar placeholder so nothing breaks.
+             If you want a headshot:
+             1) Add headshot.jpg to your repo
              2) Replace this div with:
                 <img class="hero-photo" src="headshot.jpg" alt="Justin Rodriguez headshot"> -->
         <div class="avatar" aria-label="Justin Rodriguez avatar">JR</div>
@@ -73,7 +73,6 @@
 
   <main>
 
-    <!-- SUMMARY -->
     <section id="about">
       <h3>Professional Summary</h3>
       <div class="card">
@@ -86,7 +85,6 @@
       </div>
     </section>
 
-    <!-- CAREER FOCUS -->
     <section id="goals">
       <h3>Career Focus & Opportunities</h3>
       <div class="card">
@@ -126,7 +124,6 @@
       </div>
     </section>
 
-    <!-- EXPERIENCE -->
     <section id="experience">
       <h3>Professional Experience</h3>
 
@@ -152,32 +149,27 @@
       </div>
     </section>
 
-    <!-- EDUCATION -->
     <section id="education">
       <h3>Education & Certifications</h3>
 
-      <div class="tile-row edu-tiles">
-        <!-- Degrees -->
+      <div class="tile-row">
         <div class="tile">B.A. Computer Science (Cybersecurity)</div>
         <div class="tile">A.A.S. Cybersecurity</div>
 
         <div class="tile-break" aria-hidden="true"></div>
 
-        <!-- Certifications -->
         <div class="tile">CompTIA Security+</div>
         <div class="tile">CompTIA CySA+</div>
         <div class="tile">CompTIA Network+</div>
 
         <div class="tile-break" aria-hidden="true"></div>
 
-        <!-- In progress -->
         <div class="tile in-progress">Azure AZ-500 (in progress)</div>
         <div class="tile in-progress">Microsoft SC-200 (in progress)</div>
         <div class="tile in-progress">CMMC RP (in progress)</div>
       </div>
     </section>
 
-    <!-- SKILLS -->
     <section id="skills">
       <h3>Technical & Professional Skills</h3>
       <ul class="skills">
@@ -190,7 +182,6 @@
       </ul>
     </section>
 
-    <!-- FEEDBACK -->
     <section id="testimonials">
       <h3>Professional Feedback</h3>
 
@@ -213,7 +204,6 @@
       </div>
     </section>
 
-    <!-- PROJECTS -->
     <section id="projects">
       <h3>Selected Projects</h3>
 
@@ -235,21 +225,12 @@
           performance logging to compare algorithm speed.
         </p>
 
-        <p><strong>What I learned:</strong></p>
-        <ul>
-          <li>Secure passphrase handling and key derivation using PBKDF2 and SHA-256</li>
-          <li>Measured encryption/decryption performance across algorithms</li>
-          <li>Integrated OpenSSL for broader compatibility</li>
-          <li>Built an end-to-end app: GUI + validation + crypto logic + file handling</li>
-        </ul>
-
         <div class="video-embed">
           <iframe
             src="https://www.youtube-nocookie.com/embed/KxIGkvCm34E?rel=0&playsinline=1"
             title="Secure Encrypted Chat Dashboard Video"
             allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen>
-          </iframe>
+            allowfullscreen></iframe>
         </div>
 
         <div class="button-row">
@@ -276,51 +257,11 @@
           src="S-SDLCSocketDevAlertListingUpdated.docx.pdf"
           height="500px"
           class="pdf-frame"
-          title="S-SDLC Socket Dev Alert Listing PDF Preview">
-        </iframe>
+          title="S-SDLC Socket Dev Alert Listing PDF Preview"></iframe>
         <a class="pdf-link" href="S-SDLCSocketDevAlertListingUpdated.docx.pdf" target="_blank" rel="noopener noreferrer">📄 Open Full Report</a>
-
-        <h5 class="sub-heading">Related Process Flow – Socket Security Review Workflow</h5>
-        <iframe
-          src="Updated_Socket_Flow_Chart_Redacted.pdf"
-          height="350px"
-          class="pdf-frame"
-          title="Socket Security Process Flowchart PDF Preview">
-        </iframe>
-        <a class="pdf-link" href="Updated_Socket_Flow_Chart_Redacted.pdf" target="_blank" rel="noopener noreferrer">📄 View Process Flowchart</a>
-      </div>
-
-      <div class="card">
-        <h4>AI Content Moderation: A Critical Examination of AI in Social Media and Future Directions</h4>
-
-        <div class="tag-row">
-          <span class="tag">Research</span>
-          <span class="tag">AI</span>
-          <span class="tag">Privacy</span>
-          <span class="tag">Platform Safety</span>
-        </div>
-
-        <p class="readable">
-          A research report exploring how AI can be applied to social media moderation, including detection of harmful content,
-          user behavior patterns, bot activity, and the ethical/privacy tradeoffs of automation.
-        </p>
-
-        <iframe
-          src="CS4930.pdf"
-          height="500px"
-          class="pdf-frame"
-          title="AI Content Moderation Report PDF Preview">
-        </iframe>
-        <a class="pdf-link" href="CS4930.pdf" target="_blank" rel="noopener noreferrer">📄 Open Full Report</a>
-      </div>
-
-      <div class="card">
-        <h4>Future Projects</h4>
-        <p class="readable">Planned additions including automation tools, lab writeups, and more security-focused projects.</p>
       </div>
     </section>
 
-    <!-- CONTACT -->
     <section id="contact">
       <h3>Contact & Networking</h3>
       <div class="card">
@@ -343,15 +284,8 @@
     const menu = document.getElementById('menu');
     const navLinks = menu.querySelectorAll('a');
 
-    toggle.addEventListener('click', () => {
-      menu.classList.toggle('show');
-    });
-
-    navLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        menu.classList.remove('show');
-      });
-    });
+    toggle.addEventListener('click', () => menu.classList.toggle('show'));
+    navLinks.forEach(link => link.addEventListener('click', () => menu.classList.remove('show')));
   </script>
 
 </body>
