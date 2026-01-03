@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -90,14 +90,32 @@
   <!-- Education -->
   <section id="education">
     <h3>Education & Certifications</h3>
-    <div class="tile">B.A. Computer Science (Cybersecurity)</div>
-    <div class="tile">A.A.S. Cybersecurity</div>
-    <div class="tile">Network+ </div>
-    <div class="tile">CompTIA Security+</div>
-    <div class="tile">CompTIA CySA+</div>
-    <div class="tile">Azure AZ-500 (in progress)</div>
-    <div class="tile">Microsoft SC-200 (in progress)</div>
-    
+
+    <div class="edu-block">
+      <h4 class="edu-label">Degrees</h4>
+      <div class="tile-row">
+        <div class="tile">B.A. Computer Science (Cybersecurity)</div>
+        <div class="tile">A.A.S. Cybersecurity</div>
+      </div>
+    </div>
+
+    <div class="edu-block">
+      <h4 class="edu-label">Certifications</h4>
+      <div class="tile-row">
+        <div class="tile">CompTIA Security+</div>
+        <div class="tile">CompTIA CySA+</div>
+      </div>
+    </div>
+
+    <div class="edu-block">
+      <h4 class="edu-label">In progress</h4>
+      <div class="tile-row">
+        <div class="tile in-progress">Azure AZ-500</div>
+        <div class="tile in-progress">Microsoft SC-200</div>
+        <div class="tile in-progress">Network+ (expected Jan 2026)</div>
+        <div class="tile in-progress">The Cyber AB — CMMC Registered Practitioner (RP)</div>
+      </div>
+    </div>
   </section>
 
   <!-- Skills -->
@@ -140,46 +158,47 @@
   <section id="projects">
     <h3>Selected Projects</h3>
 
-<div class="card">
-  <h4>Secure Encrypted Chat </h4>
+    <div class="card">
+      <h4>Secure Encrypted Chat</h4>
 
-  <p>
-    I built a Python based desktop application using Tkinter to make cryptography practical.
-    It allows users to securely encrypt and decrypt text or files using AES, DES, and 3DES.
-    The tool focuses on real world security by using PBKDF2 and a salt to turn passphrases
-    into strong cryptographic keys. It also includes a real time performance logger and
-    graph to compare the speed of each algorithm.
-  </p>
+      <p>
+        I built a Python based desktop application using Tkinter to make cryptography practical.
+        It allows users to securely encrypt and decrypt text or files using AES, DES, and 3DES.
+        The tool focuses on real world security by using PBKDF2 and a salt to turn passphrases
+        into strong cryptographic keys. It also includes a real time performance logger and
+        graph to compare the speed of each algorithm.
+      </p>
 
-  <p>
-    <strong>Why I Did It:</strong>
-    I built this project because I was tired of just reading about cryptography. 
-    I wanted to jump into the deep end and see how AES, DES, and key derivation actually work in a real program.
-    My core motivation was to gain a hands-on understanding of secure passphrase management (using hashing like SHA-256) and how these algorithms behave in a real-world system.  </p>
+      <p>
+        <strong>Why I Did It:</strong>
+        I built this project because I was tired of just reading about cryptography.
+        I wanted to jump into the deep end and see how AES, DES, and key derivation actually work in a real program.
+        My core motivation was to gain a hands-on understanding of secure passphrase management (using hashing like SHA-256) and how these algorithms behave in a real-world system.
+      </p>
 
-  <p><strong>What I Learned:</strong></p>
-  <ul>
-    <li>Developed a strong understanding of secure passphrase handling using PBKDF2 and SHA 256, and the distinction between a passphrase and a cryptographic key.</li>
-    <li>Measured and compared encryption and decryption performance using high resolution timing, confirming AES as the fastest and observing unexpected real world differences between DES and 3DES.</li>
-    <li>Gained hands on experience integrating system level tools like OpenSSL into a Python application for broader compatibility.</li>
-    <li>Connected GUI design, user input validation, encryption logic, file handling, and performance analysis into a single cohesive application.</li>
-  </ul>
+      <p><strong>What I Learned:</strong></p>
+      <ul>
+        <li>Developed a strong understanding of secure passphrase handling using PBKDF2 and SHA 256, and the distinction between a passphrase and a cryptographic key.</li>
+        <li>Measured and compared encryption and decryption performance using high resolution timing, confirming AES as the fastest and observing unexpected real world differences between DES and 3DES.</li>
+        <li>Gained hands on experience integrating system level tools like OpenSSL into a Python application for broader compatibility.</li>
+        <li>Connected GUI design, user input validation, encryption logic, file handling, and performance analysis into a single cohesive application.</li>
+      </ul>
 
-  <div class="video-embed">
-    <iframe
-      src="https://www.youtube-nocookie.com/embed/KxIGkvCm34E?rel=0&playsinline=1"
-      title="Secure Encrypted Chat Dashboard Video"
-      allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowfullscreen>
-    </iframe>
-  </div>
+      <div class="video-embed">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/KxIGkvCm34E?rel=0&playsinline=1"
+          title="Secure Encrypted Chat Dashboard Video"
+          allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
 
-  <div class="button-row">
-    <a class="button" href="https://youtu.be/KxIGkvCm34E" target="_blank" rel="noopener noreferrer">
-      Open on YouTube
-    </a>
-  </div>
-</div>
+      <div class="button-row">
+        <a class="button" href="https://youtu.be/KxIGkvCm34E" target="_blank" rel="noopener noreferrer">
+          Open on YouTube
+        </a>
+      </div>
+    </div>
 
     <div class="card">
       <h4>S-SDLC Security Alert Framework (Document)</h4>
@@ -228,6 +247,7 @@
       </iframe>
       <a class="pdf-link" href="CS4930.pdf" target="_blank" rel="noopener noreferrer">📄 Open Full Report</a>
     </div>
+
     <div class="card">
       <h4>Future Projects</h4>
       <p>Planned additions including automation tools, lab writeups, and more security-focused projects.</p>
