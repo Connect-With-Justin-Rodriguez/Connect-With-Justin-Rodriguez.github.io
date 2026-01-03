@@ -1,19 +1,15 @@
+<!-- index.html (FULL) -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Connect With Justin Rodriguez</title>
-
-  <!-- IMPORTANT:
-       If your index.html is in /docs and style.css is in root, use href="../style.css"
-       If they are in the same folder, use href="./style.css" -->
   <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
 
-<!-- Simple Top Header (clean, not "landing page") -->
 <header class="masthead">
   <div class="masthead-inner">
     <div class="masthead-left">
@@ -21,7 +17,7 @@
       <p class="masthead-title">Network Security Operations Analyst</p>
 
       <p class="masthead-sub">
-        Blue-team focused — security monitoring, alert triage, and incident response in enterprise environments.
+        Security operations focused on alert investigation, incident escalation, and keeping enterprise systems running.
       </p>
 
       <div class="button-row">
@@ -31,15 +27,13 @@
       </div>
     </div>
 
-    <!-- Photo square (safe placeholder) -->
-    <!-- To add a headshot:
-         1) Upload your photo into the repo (ex: headshot.jpg)
-         2) Update --photo-url below to match the filename -->
+    <!-- Photo square -->
     <a class="photo-card"
        href="Justin_Rodriguez_Resume.pdf"
        target="_blank"
        rel="noopener noreferrer"
        style="--photo-url: url('headshot.jpeg');">
+      <span class="photo-initials">JR</span>
       <span class="photo-hint">View Resume</span>
     </a>
   </div>
@@ -93,72 +87,66 @@
     </div>
   </section>
 
-<!-- Experience -->
-<section id="experience">
-  <h3>Professional Experience</h3>
+  <!-- Experience -->
+  <section id="experience">
+    <h3>Professional Experience</h3>
 
-  <div class="card">
-    <div class="card-head">
-      <h4>Rooms To Go – NSOC Analyst</h4>
-      <div class="card-date">Jan 2025 – Present</div>
-    </div>
-    <p>
-      I work in the Network Security Operations Center monitoring more than 200 networks for both performance
-      and security issues. I use tools like Juniper Mist, Cisco vManage, SolarWinds, and Microsoft Defender to
-      investigate alerts, validate whether something is a real threat or a false positive, and coordinate with
-      other teams to resolve incidents. I also help maintain access controls and Conditional Access policies so
-      only the right users can reach critical systems.
-    </p>
-  </div>
-
-  <div class="card">
-    <div class="card-head">
-      <h4>TheIncLab – Cyber Security Analyst (Internship)</h4>
-      <div class="card-date">May 2024 – Aug 2024</div>
-    </div>
-    <p>
-      I supported cybersecurity work for R&amp;D projects by helping apply the Risk Management Framework (RMF)
-      and align controls with NIST and CMMC requirements. I wrote and edited security policies, built system and
-      data flow diagrams, and monitored events with Wazuh SIEM. A big part of the role was turning technical
-      findings into clear documentation that engineers and leadership could actually use.
-    </p>
-  </div>
-
-  <div class="card">
-    <div class="card-head">
-      <h4>Pikes Peak Community College – Information Technology Help Desk (Part-time)</h4>
-      <div class="card-date">Jul 2019 – Dec 2021</div>
+    <div class="card">
+      <div class="card-head">
+        <h4>Rooms To Go – NSOC Analyst</h4>
+        <div class="card-date">Jan 2025 – Present</div>
+      </div>
+      <p>
+        I work in the Network Security Operations Center monitoring more than 200 networks for both performance
+        and security issues. I use tools like Juniper Mist, Cisco vManage, SolarWinds, and Microsoft Defender to
+        investigate alerts, validate whether something is a real threat or a false positive, and coordinate with
+        other teams to resolve incidents. I also help maintain access controls and Conditional Access policies so
+        only the right users can reach critical systems.
+      </p>
     </div>
 
-    <ul class="bullets">
-      <li><strong>Effective Communication &amp; Technical Support:</strong> Provided timely and effective support to users through phone, email, and in-person interactions, ensuring their technical issues were resolved.</li>
-      <li><strong>Problem Solving &amp; Technical Expertise:</strong> Troubleshot and resolved a wide range of hardware and software issues for both Windows and Mac systems, demonstrating strong technical knowledge and problem-solving skills.</li>
-      <li><strong>Account Management &amp; Security:</strong> Managed user accounts by resetting passwords and unlocking accounts remotely, ensuring secure and efficient access for users.</li>
-      <li><strong>Documentation &amp; Record Keeping:</strong> Maintained detailed documentation of support activities and complex issues, ensuring a reliable reference and knowledge base.</li>
-    </ul>
-  </div>
+    <div class="card">
+      <div class="card-head">
+        <h4>TheIncLab – Cyber Security Analyst (Internship)</h4>
+        <div class="card-date">May 2024 – Aug 2024</div>
+      </div>
+      <p>
+        I supported cybersecurity work for R&amp;D projects by helping apply the Risk Management Framework (RMF)
+        and align controls with NIST and CMMC requirements. I wrote and edited security policies, built system and
+        data flow diagrams, and monitored events with Wazuh SIEM. A big part of the role was turning technical
+        findings into clear documentation that engineers and leadership could actually use.
+      </p>
+    </div>
 
-</section>
+    <div class="card">
+      <div class="card-head">
+        <h4>Pikes Peak Community College – Information Technology Help Desk (Part-time)</h4>
+        <div class="card-date">Jul 2019 – Dec 2021</div>
+      </div>
+      <p>
+        Provided timely support through phone, email, and in-person troubleshooting, resolving hardware and software
+        issues across Windows and Mac systems. Managed user access by resetting passwords and unlocking accounts remotely,
+        and maintained detailed documentation of support activity and complex issues to support a reliable knowledge base.
+      </p>
+    </div>
+  </section>
 
   <!-- Education -->
   <section id="education">
     <h3>Education & Certifications</h3>
 
     <div class="tile-row">
-      <!-- Degrees -->
       <div class="tile">B.A. Computer Science (Cybersecurity)</div>
       <div class="tile">A.A.S. Cybersecurity</div>
 
       <div class="tile-break" aria-hidden="true"></div>
 
-      <!-- Certifications (completed) -->
       <div class="tile">CompTIA Security+</div>
       <div class="tile">CompTIA CySA+</div>
       <div class="tile">CompTIA Network+</div>
 
       <div class="tile-break" aria-hidden="true"></div>
 
-      <!-- In progress -->
       <div class="tile in-progress">Azure AZ-500 (in progress)</div>
       <div class="tile in-progress">Microsoft SC-200 (in progress)</div>
       <div class="tile in-progress">CMMC Registered Practitioner (RP) (in progress)</div>
