@@ -1,19 +1,22 @@
 :root {
-  --bg: #0b1220;
-  --bg-soft: #121b2d;
-  --surface: rgba(255, 255, 255, 0.06);
-  --surface-strong: rgba(255, 255, 255, 0.1);
+  --bg-top: #eaf2ff;
+  --bg-mid: #f4f8ff;
+  --bg-bottom: #f8fafc;
+  --nav-bg: rgba(255, 255, 255, 0.82);
+  --surface: rgba(255, 255, 255, 0.72);
+  --surface-strong: rgba(255, 255, 255, 0.92);
   --card: #ffffff;
   --text: #0f172a;
   --text-soft: #475569;
-  --text-light: #cbd5e1;
+  --text-light: #64748b;
   --white: #ffffff;
   --border: rgba(148, 163, 184, 0.22);
-  --accent: #60a5fa;
+  --accent: #3b82f6;
   --accent-strong: #2563eb;
-  --accent-soft: rgba(96, 165, 250, 0.16);
+  --accent-soft: rgba(59, 130, 246, 0.12);
   --success: #16a34a;
-  --shadow: 0 18px 40px rgba(2, 8, 23, 0.14);
+  --shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+  --shadow-soft: 0 10px 24px rgba(15, 23, 42, 0.06);
   --radius: 20px;
   --radius-sm: 14px;
   --max-width: 1180px;
@@ -31,9 +34,9 @@ body {
   margin: 0;
   font-family: Inter, Segoe UI, Roboto, Arial, sans-serif;
   background:
-    radial-gradient(circle at top left, rgba(37, 99, 235, 0.24), transparent 32%),
-    radial-gradient(circle at top right, rgba(14, 165, 233, 0.18), transparent 25%),
-    linear-gradient(180deg, #0b1220 0%, #0f172a 38%, #e2e8f0 38%, #f8fafc 100%);
+    radial-gradient(circle at top left, rgba(59, 130, 246, 0.14), transparent 28%),
+    radial-gradient(circle at top right, rgba(125, 211, 252, 0.16), transparent 24%),
+    linear-gradient(180deg, var(--bg-top) 0%, var(--bg-mid) 34%, var(--bg-bottom) 100%);
   color: var(--text);
   line-height: 1.7;
 }
@@ -55,7 +58,7 @@ iframe {
 
 .masthead {
   padding: 4.5rem 0 2rem;
-  color: var(--white);
+  color: var(--text);
 }
 
 .masthead-inner {
@@ -69,12 +72,13 @@ iframe {
   display: inline-block;
   margin: 0 0 1rem;
   padding: 0.45rem 0.8rem;
-  border: 1px solid rgba(255,255,255,0.18);
-  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(37, 99, 235, 0.18);
+  background: rgba(255, 255, 255, 0.72);
   border-radius: 999px;
   font-size: 0.9rem;
   font-weight: 700;
-  color: #dbeafe;
+  color: var(--accent-strong);
+  box-shadow: var(--shadow-soft);
 }
 
 .masthead h1 {
@@ -82,20 +86,21 @@ iframe {
   font-size: clamp(2.4rem, 5vw, 4.25rem);
   line-height: 1.05;
   letter-spacing: -0.03em;
+  color: #0f172a;
 }
 
 .masthead-title {
   margin: 1rem 0 0.75rem;
   font-size: clamp(1.1rem, 2vw, 1.45rem);
   font-weight: 700;
-  color: #bfdbfe;
+  color: #1d4ed8;
 }
 
 .masthead-sub {
   max-width: 760px;
   margin: 0;
   font-size: 1.03rem;
-  color: var(--text-light);
+  color: var(--text-soft);
 }
 
 .hero-highlights {
@@ -108,11 +113,12 @@ iframe {
 .pill {
   padding: 0.55rem 0.85rem;
   border-radius: 999px;
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.14);
-  color: #e2e8f0;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  color: #334155;
   font-size: 0.92rem;
   font-weight: 600;
+  box-shadow: var(--shadow-soft);
 }
 
 .photo-card {
@@ -121,10 +127,10 @@ iframe {
   display: block;
   border-radius: 28px;
   background:
-    linear-gradient(180deg, rgba(255,255,255,0.1), rgba(255,255,255,0.04)),
+    linear-gradient(180deg, rgba(255,255,255,0.12), rgba(255,255,255,0.03)),
     var(--photo-url) center center / cover no-repeat;
-  border: 1px solid rgba(255,255,255,0.16);
-  box-shadow: 0 20px 50px rgba(2, 8, 23, 0.3);
+  border: 1px solid rgba(148, 163, 184, 0.24);
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.12);
 }
 
 .site-nav {
@@ -132,9 +138,9 @@ iframe {
   top: 0;
   z-index: 100;
   backdrop-filter: blur(14px);
-  background: rgba(11, 18, 32, 0.72);
-  border-top: 1px solid rgba(255,255,255,0.08);
-  border-bottom: 1px solid rgba(255,255,255,0.08);
+  background: var(--nav-bg);
+  border-top: 1px solid rgba(148, 163, 184, 0.16);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.16);
 }
 
 .nav-inner {
@@ -145,7 +151,7 @@ iframe {
 
 .menu-toggle {
   display: none;
-  color: var(--white);
+  color: var(--text);
   font-weight: 700;
   cursor: pointer;
 }
@@ -163,14 +169,14 @@ iframe {
   display: inline-block;
   padding: 0.65rem 0.9rem;
   border-radius: 10px;
-  color: #e2e8f0;
+  color: #334155;
   font-weight: 600;
   transition: 0.2s ease;
 }
 
 #menu a:hover {
-  background: rgba(255,255,255,0.08);
-  color: #ffffff;
+  background: rgba(59, 130, 246, 0.08);
+  color: var(--accent-strong);
 }
 
 main {
@@ -199,12 +205,13 @@ main {
   font-size: clamp(1.7rem, 3vw, 2.35rem);
   line-height: 1.15;
   letter-spacing: -0.02em;
+  color: #0f172a;
 }
 
 .card,
 .testimonial-card {
-  background: rgba(255, 255, 255, 0.88);
-  border: 1px solid rgba(148, 163, 184, 0.2);
+  background: var(--surface-strong);
+  border: 1px solid rgba(148, 163, 184, 0.18);
   border-radius: var(--radius);
   padding: 1.5rem;
   box-shadow: var(--shadow);
@@ -266,25 +273,27 @@ main {
   min-height: 46px;
   padding: 0.8rem 1rem;
   border-radius: 12px;
-  background: #e2e8f0;
+  background: #ffffff;
   color: #0f172a;
   font-weight: 700;
-  border: 1px solid transparent;
+  border: 1px solid rgba(148, 163, 184, 0.25);
   transition: 0.2s ease;
+  box-shadow: var(--shadow-soft);
 }
 
 .button:hover {
   transform: translateY(-1px);
-  background: #dbeafe;
+  background: #eff6ff;
 }
 
 .button.primary {
-  background: linear-gradient(135deg, var(--accent-strong), #1d4ed8);
+  background: linear-gradient(135deg, var(--accent-strong), #3b82f6);
   color: #ffffff;
+  border-color: transparent;
 }
 
 .button.primary:hover {
-  background: linear-gradient(135deg, #1d4ed8, #1e40af);
+  background: linear-gradient(135deg, #1d4ed8, #2563eb);
 }
 
 .tile-row {
@@ -299,7 +308,7 @@ main {
   min-height: 48px;
   padding: 0.8rem 1rem;
   border-radius: 12px;
-  background: #f8fafc;
+  background: #ffffff;
   border: 1px solid #dbeafe;
   color: #0f172a;
   font-weight: 700;
@@ -328,9 +337,10 @@ main {
 .skills li {
   padding: 0.95rem 1rem;
   border-radius: 12px;
-  background: #f8fafc;
+  background: #ffffff;
   border: 1px solid #e2e8f0;
   font-weight: 600;
+  box-shadow: var(--shadow-soft);
 }
 
 .testimonial-card {
@@ -387,7 +397,7 @@ main {
   margin-top: 1rem;
   border-radius: 16px;
   overflow: hidden;
-  background: #0f172a;
+  background: #e2e8f0;
   border: 1px solid #cbd5e1;
 }
 
