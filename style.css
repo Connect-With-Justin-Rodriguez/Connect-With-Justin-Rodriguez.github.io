@@ -111,9 +111,13 @@ iframe {
 
 .masthead-inner {
   display: grid;
-  grid-template-columns: minmax(0, 1.35fr) minmax(240px, 320px);
+  grid-template-columns: minmax(0, 1fr);
   gap: clamp(1.25rem, 3vw, 2.5rem);
-  align-items: center;
+  align-items: start;
+}
+
+.masthead-left {
+  min-width: 0;
 }
 
 .eyebrow {
@@ -173,7 +177,6 @@ iframe {
 .photo-card {
   width: 100%;
   max-width: 320px;
-  justify-self: end;
   aspect-ratio: 1 / 1;
   display: block;
   border-radius: 28px;
@@ -182,6 +185,7 @@ iframe {
     var(--photo-url) center center / cover no-repeat;
   border: 1px solid var(--border);
   box-shadow: var(--shadow);
+  margin-top: 1.25rem;
 }
 
 .site-nav {
@@ -504,24 +508,69 @@ footer {
   font-weight: 600;
 }
 
-/* Large tablets / smaller desktops */
-@media (max-width: 1100px) {
+/* Tablets and up */
+@media (min-width: 901px) {
   .masthead-inner {
-    grid-template-columns: minmax(0, 1fr) 280px;
+    grid-template-columns: minmax(0, 1.2fr);
+  }
+
+  .masthead-left {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 320px;
+    grid-template-areas:
+      "eyebrow photo"
+      "title photo"
+      "subtitle photo"
+      "buttons photo"
+      "pills photo";
+    column-gap: 2.5rem;
+    row-gap: 0.85rem;
+    align-items: start;
+  }
+
+  .eyebrow {
+    grid-area: eyebrow;
+    width: fit-content;
+  }
+
+  .masthead h1 {
+    grid-area: title;
+  }
+
+  .masthead-title,
+  .masthead-sub {
+    grid-column: 1;
+  }
+
+  .masthead-title {
+    grid-area: subtitle;
+    margin-bottom: 0;
+  }
+
+  .masthead-sub {
+    grid-row: 4;
+    margin-top: -0.35rem;
+  }
+
+  .photo-card {
+    grid-area: photo;
+    margin-top: 0;
+    justify-self: end;
+  }
+
+  .button-row {
+    grid-column: 1;
+    grid-row: 5;
+  }
+
+  .hero-highlights {
+    grid-column: 1;
+    grid-row: 6;
   }
 }
 
 /* Tablets */
 @media (max-width: 900px) {
-  .masthead-inner {
-    grid-template-columns: 1fr;
-  }
-
-  .photo-card {
-    justify-self: start;
-    max-width: 260px;
-  }
-
   .skills {
     grid-template-columns: 1fr;
   }
@@ -537,6 +586,48 @@ footer {
 
 /* Phones */
 @media (max-width: 760px) {
+  .masthead {
+    padding-top: 2.25rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .masthead-inner {
+    display: block;
+  }
+
+  .masthead-left {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .photo-card {
+    width: 220px;
+    max-width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 0.25rem;
+    align-self: flex-start;
+  }
+
+  .button-row {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  .hero-highlights {
+    gap: 0.5rem;
+    width: 100%;
+  }
+
+  .pill {
+    font-size: 0.88rem;
+  }
+
   .nav-inner {
     flex-direction: column;
     align-items: stretch;
@@ -563,10 +654,6 @@ footer {
     width: 100%;
   }
 
-  .masthead {
-    padding-top: 2.5rem;
-  }
-
   .card,
   .testimonial-card {
     padding: 1rem;
@@ -574,23 +661,6 @@ footer {
 
   .video-embed iframe {
     min-height: 240px;
-  }
-
-  .button-row {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .button {
-    width: 100%;
-  }
-
-  .hero-highlights {
-    gap: 0.5rem;
-  }
-
-  .pill {
-    font-size: 0.88rem;
   }
 }
 
@@ -609,6 +679,6 @@ footer {
   }
 
   .photo-card {
-    max-width: 220px;
+    width: 190px;
   }
 }
